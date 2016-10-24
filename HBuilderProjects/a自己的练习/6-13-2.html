@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			.box{
+				position:relative;
+				background:url(img/bg.jpg) no-repeat;
+				width: 370px;
+				height: 450px;
+				padding: 30px 0;
+				margin-bottom: 0 auto;
+				overflow: hidden;
+			}
+			#ul1{
+				list-style: none;
+				/*width: 2960px;*/
+				position:absolute;
+				left: 0;
+			}
+			#ul1 li{
+				
+				float: left;
+				margin: 0 10px;
+			}
+			#ul1 img{
+				width: 350px;
+				height: 450px;
+			}
+			
+			#ul2{
+				width: 200px;
+				height: 10px;
+				position: absolute;
+				bottom: 40px;
+				margin-left: 85px;
+				list-style: none;
+			}
+			
+			#ul2 a{
+			
+				display: block;
+				margin: 5px;
+				width: 10px;
+				height: 10px;
+				background-color: deepskyblue;
+				float: left;
+				opacity:0.5;
+				filter: alpha(opacity:50);
+			}
+		</style>
+		<script src="js/1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img=document.getElementsByTagName("img");
+				var a=document.getElementsByTagName("a");
+				var ul=document.getElementById("ul1");
+				var ul2=document.getElementById("ul2");
+				var num=0;
+				var timer=null;
+				//ul的宽度
+				ul.style.width=370*img.length+"px";
+				//用js创建a
+				for (var i=0;i<img.length-1;i++) {
+					ul2.innerHTML += "<a href='javascript:;'></a>";
+				}
+				autochange();
+				a[0].style.backgroundColor="black"
+				for (var i=0;i<a.length;i++) {
+					a[i].index=i;
+					a[i].onmouseenter=function(){
+						clearInterval(timer);
+						num=this.index;
+						init();
+						move(ul,"left",-370*this.index,100,function(){
+							autochange();
+						})
+					};
+				}
+			
+			function autochange(){
+				timer=setInterval(function(){
+					num++;
+					if(num>img.length){
+						num=0;
+					}
+					move(ul,"left",-370*num,10,function(){
+						init();
+					})
+				},2000)
+			}
+			function init(){
+				if(num>=img.length-1){
+					ul.style.left=0;
+					num=0;
+				}
+				
+				for (var i=0;i<a.length;i++) {
+					a[i].style.backgroundColor="";
+				}
+				a[num].style.backgroundColor="black";
+				
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+		<ul id="ul1">
+		<li><img src="img/1.jpg"/></li>
+		<li><img src="img/2.jpg"/></li>
+		<li><img src="img/3.jpg"/></li>
+		<li><img src="img/4.jpg"/></li>
+		<li><img src="img/5.jpg"/></li>
+		<li><img src="img/6.jpg"/></li>
+		<li><img src="img/7.jpg"/></li>
+		<li><img src="img/8.jpg"/></li>
+		<li><img src="img/1.jpg"/></li>
+		</ul>
+		
+		<div id="ul2">
+			<!--<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>-->
+		</div>
+		</div>
+	</body>
+</html>

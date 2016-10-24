@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*其他伪类选择器*/
+			input:focus{
+				background-color: green;
+			}
+			a:before{
+				content:" hello";
+			}
+			a:after{
+				content:" world";
+			}
+			.ok::selection{
+				background-color: blueviolet;
+			}
+			.ok::-moz-selection{
+				background-color: blueviolet;
+			}
+			/*段落定义样式*/
+			.p1:first-letter{
+				color: red;
+			}
+			.p1:first-line{
+				background-color: blue;
+			}
+			/*属性选择器*/
+			p[title]{
+				background-color: greenyellow;
+			}
+			p[title=hello]{
+				color: plum;
+			}
+			p[title^=a]{
+				background-color: orange;
+			}
+			p[title$=lo]{
+				font-size: 30px;			
+				}
+			p[title*=i]	{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" /><br />
+		<a href="#">超链接</a>
+		<p class="ok">这是一个段落</p>
+		<h1 class="p1">Today is sunday</h1>
+		<hr />
+		<p title="hello">春天来了</p>
+		<p title="abiilo">春暖花开</p>
+		<p title="abok">春风化雨</p>
+		<p title="giod">润物细无声</p>
+	</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			Person.prototype.toString=function(){
+				
+				return "Person [name="+this.name+" , age="+this.age+"]";
+			};
+			
+			
+			per1=new Person("清风",12);
+			per2=new Person("明月",22);
+			per3=new Person("徐徐",3);
+			per4=new Person("吹来",56);
+			
+			var perarr=[per1,per2,per3,per4];
+			/*for(var j=0;j<perarr.length;j++){
+				
+				console.log(perarr[j]);
+				
+			}
+			*/
+			function last(a  ){
+				var arr1=[];
+				for (var i=0;i<a.length;i++) {
+					var per=a[i];
+					if(per.age>18){
+						
+						arr1.push(per)
+						
+					}
+					
+					
+				}
+				
+				return arr1;
+				
+			}
+			
+			
+			var arr=last(perarr);
+			console.log(arr);
+		
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

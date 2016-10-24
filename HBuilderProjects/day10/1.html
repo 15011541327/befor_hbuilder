@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> 数据类型转换 </title>
+		<script type="text/javascript">
+		//null型只有一个null值，它是一个值为空的对象。
+			var a = null; 
+			//console.log(typeof a);输出:object
+			//console.log(a);输出:null
+			
+			//undefined只有unde型fined一个值，声明一个变量而 不给变量赋值；
+			var b;
+			//console.log(typeof b);输出:undefined
+			//console.log(b);输出:undefined
+			
+			
+			
+			
+			/*其他类型转换成String类型*/
+			//一、调用数值的toString()函数
+			a = 123;
+			a = a.toString();
+			//console.log(typeof a);输出:Sting
+			//console.log(a);输出:123
+			a = true;
+			a = a.toString();
+			//console.log(typeof a);输出:string
+		    //console.log(a);输出:true
+			/* undefined和null:Cannot read property 'toString' of undefined*/
+			
+			
+			//二、使用String()函数
+			//当使用String()处理处理数字、布尔、和字符串时会调用这些数据的toString()函数
+			a = undefined;
+			a = String(a);
+			//console.log(typeof a);输出:string
+		    //console.log(a);输出:undefined
+		    a = null;
+		    a = String(a);
+		    //console.log(typeof a);输出:string
+		    //console.log(a);输出:null
+		    
+		    
+		    //三、其他类型转换成数字类型
+		    /*Number() 、 ParseInt() 、ParseFloat() 函数    */
+		    //使用Number()函数
+		    a = "123";
+		    a = Number(a);
+		    // console.log(typeof a);输出:number
+		    //console.log(a);输出:123
+		    a = "12px"
+		    a = Number(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:NaN
+		    a = "12.345"
+		    a = Number(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:12.345
+		    a = true;
+		    a = Number(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:1
+		    a = undefined;
+		    a = Number(a)
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:NaN
+		    a = null;
+		    a = Number(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:0
+		    
+		    
+		    //使用ParseInt()函数
+		    a = "123";
+		    a = parseInt(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:123
+		    a = "12px"
+		    a = parseInt(a);
+		     //console.log(typeof a);输出:number
+		     //console.log(a);输出:12
+		    a ="12.23"
+		    a = parseInt(a);
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:12
+		    a = true;
+		    a = parseInt(a);
+		    //console.log(a);输出:NaN
+		    a = undefined;
+		    a = parseInt(a);
+		   //console.log(a);输出:NaN
+		    a = null;
+		    a = parseInt(a);
+		    //console.log(a);输出:NaN
+		    
+		     
+		    //这个函数在ES3 会当成8进制的数，弹出56
+			str = '070'; 
+			//在parseInt后指定第二个参数10，来告诉浏览器数值的类型为十进制
+			str = parseInt(str,10);
+			//alert(str);
+		    
+		    //使用ParseFloat()函数
+		    //与parseInt()类似
+		    a = "12.34.12"
+		    a = parseFloat(a);
+		    //console.log(a);输出:12.34
+		    
+		    
+		    //布尔类型转换
+		    a = 0;
+		    a = Boolean(a);
+		    //console.log(a);输出:false
+		    a = "";
+		    a = Boolean(a);
+		    //console.log(a);输出:false
+		    a = undefined;
+		    a = Boolean(a);
+		    //console.log(a);输出:false
+		    a = null;
+		    a = Boolean(a);
+		    //console.log(a);输出:false
+		  
+		   
+		    
+		   
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

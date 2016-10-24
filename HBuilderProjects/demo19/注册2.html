@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		window.onload = function () {
+			function getClassName (cn) {
+				var arr = [];
+				var all = document.all;
+				var reg = new RegExp('\\b'+cn+'\\b');
+				for (var i=0; i<all.length; i++) {
+					var nameArr = all[i].className;
+					if(reg.test(nameArr)){
+						arr.push(all[i]);
+					}
+				}
+				return arr;
+			}
+			var inp = getClassName('inp');
+			//第一行鼠标进入
+			inp[0].style.color = 'silver';//银色
+			inp[0].onfocus = function () {
+				if(this.value == this.defaultValue){
+					this.value = '';
+					this.style.color = '#000';
+				}
+			}
+			//第一行鼠标移开
+			inp[0].onblur = function () {
+				if(this.value == ''){
+					this.value = this.defaultValue;
+					this.style.color = 'silver';
+				}
+			}
+			//第二行鼠标进入
+			inp[1].onfocus = function () {
+				
+			}
+			
+			
+		}
+	</script>
+	</head>
+	<body>
+		<h1>欢迎用户注册</h1>
+		<form action="target.html">
+		<div >
+			<lable>电子邮件：</lable>
+		<input class="inp" type="text"  name="email" value="请输入邮箱" />
+		<span></span>
+		</div>
+		<div >
+			<lable>密&emsp;&emsp;码：</lable>
+		<input class="inp" type="text"  name="pas" value="请输入密码" />
+		<span></span>
+		</div>
+		<div >
+			<lable>确认密码：</lable>
+		<input class="inp" type="text"  name="repas" value="再次确认密码" />
+		<span></span>
+		</div>
+		<button id="btn">注册</button>
+		</form>
+	</body>
+</html>

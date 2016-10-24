@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//var per=new Person();
+			//per是Person的实例；
+			
+			
+			/*
+			 * this
+			 * 1.函数作为对象的方法调用，this就是当前对象
+			 * 2.作为函数调用，this就是window
+			 * 3.函数作为构造函数调用，this就是新创建的那个对象
+			
+			
+			function Fun(){
+				this.age=15;
+			}
+		
+			
+			  Fun();//作为函数调用，this就是window;
+			alert(age);//输出：15
+			
+			
+			
+			 var per=new Fun();//作为构造函数调用，this就是新创建的那个对象；
+			alert(age);"Uncaught ReferenceError: age is not defined"
+			*/
+			
+			
+			
+			
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+				this.sayName=ok;
+			}
+			/*这些不需要window使用的函数，我们不希望在全局执行环境中定义*/
+			function ok(){
+				alert(this.name);
+			}
+			var per1= new Person();
+			var per2= new Person();
+			
+			console.log(per1.ok==per2.ok);//输出：trun
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>延时器</title>
+		
+		<script type="text/javascript">
+		
+		var i=0;
+		var timer;
+		function start2(){
+		var obj=document.getElementById("result");
+		//console.log(obj.value);
+		
+		obj.value= "该程序运行了"+i+"秒"	;
+		
+		i++;
+		
+		timer=window.setTimeout(start2,100)
+		
+		}
+		
+		
+		function stop2(){
+			i=0;
+			window.clearTimeout(timer)
+			
+		}
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<input type="button" id="result" value="该程序运行了0秒" />
+		<input type="button" value="开始" onclick="start2()" />
+		<input type="button" value="停止" onclick="stop2()" />
+	</body>
+</html>

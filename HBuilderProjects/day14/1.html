@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(){
+				
+			}
+			
+			var per1=new Person();
+			var per2=new Person();
+			Person.prototype.age=12;
+			console.log(per1.__proto__==Person.prototype);
+			console.log(per1.age);
+			console.log(Person.prototype.toString()==per1.toString());
+			console.log(Person.prototype.constructor);
+			console.log(per1.constructor);
+			console.log(per1 instanceof Person);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

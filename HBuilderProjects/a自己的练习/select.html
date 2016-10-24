@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var checkedall=document.getElementById("checkedall");
+				var nocheked=document.getElementById("nochecked");
+				var revers=document.getElementById("revers");
+				var items=document.getElementsByName("items");
+				var go=document.getElementById("go");
+				var item=document.getElementById("item");
+				checkedall.onclick=function(){
+					for (var i=0;i<items.length;i++) {
+						items[i].checked=true;
+					}
+				}
+				nocheked.onclick=function(){
+					for (var i=0;i<items.length;i++) {
+						items[i].checked=false;
+					}
+				}
+				revers.onclick=function(){
+					for (var i=0;i<items.length;i++) {
+						items[i].checked=!items[i].checked;
+						
+					}
+				}
+				go.onclick=function(){
+					for (var i=0;i<items.length;i++) {
+						if(items[i].checked){
+							alert(items[i].value);	
+						}
+					}
+				}
+				item.onclick=function(){
+					for (var i=0;i<items.length;i++) {
+						items[i].checked=this.checked;
+						
+					}
+				}
+				/*根据items的状态判断全选和全不选的状态*/
+				for (var i=0;i<items.length;i++) {
+					items[i].onclick=function(){
+						item.checked=true;
+						for (var j=0;j<items.length;j++) {
+							if(!items[j].checked){
+								item.checked=false;
+							}
+						}
+					
+				}
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			你喜欢的运动是？
+			<input type="checkbox" name="item" id="item" value="" />全选/全不选<br />
+			<input type="checkbox" name="items" id="" value="足球" />足球
+			<input type="checkbox" name="items" id="" value="篮球" />篮球
+			<input type="checkbox" name="items" id="" value="羽毛球" />羽毛球
+			<input type="checkbox" name="items" id="" value="乒乓球" />乒乓球<br />
+			
+			
+			<input type="button" id="checkedall" value="全选"/>
+			<input type="button" id="nochecked" value="全不选" />
+			<input type="button" id="revers" value="反选" />
+			<input type="submit" id="go" name="提交" />
+		</form>
+	</body>
+</html>

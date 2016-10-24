@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<script type="text/javascript">
+		function dele(){
+			/*var arr=document.getElementsByTagName("a");
+			for (var i=0;i<arr.length;i++) {
+				
+				arr[i].onclick=function(){
+					var tr=this.parentNode.parentNode;
+					var name=tr.getElementsByTagName("td")[0].innerHTML;
+					var flag=confirm("你确定删除"+name+"吗？");
+					if(flag){
+						tr.parentNode.removeChild(tr);
+					}
+					return false;
+				}*/
+		}
+		
+		
+		window.onload=function(){
+			var arr=document.getElementsByTagName("a");
+			for (var i=0;i<arr.length;i++) {
+				
+				arr[i].onclick=function(){
+					var tr=this.parentNode.parentNode;
+					var name=tr.getElementsByTagName("td")[0].innerHTML;
+					var flag=confirm("你确定删除"+name+"吗？");
+					if(flag){
+						tr.parentNode.removeChild(tr);
+					}
+					return false;
+				}
+			}
+			//2.添加新项目
+			//获取元素
+			 var addsubmit=document.getElementById("addEmpButton");
+			 addsubmit.onclick=function(){
+			 var name=document.getElementById("empName").value;
+			 var email=document.getElementById("email").value;
+			 var salary=document.getElementById("salary").value;
+			//创建一行
+			var tr=document.createElement("tr");
+			//四个td
+			var nametd=document.createElement("td");
+			var emailtd=document.createElement("td");
+			var salarytd=document.createElement("td");
+			var atd=document.createElement("td");
+			//创建文本节点
+			var nametext=document.createTextNode(name);
+			var emailtext=document.createTextNode(email);
+			var salarytext=document.createTextNode(salary);
+			//添加a
+			var a=document.createElement("a");
+			var atext=document.createTextNode("delete");
+			//将文本节点添加到父元素里
+			a.appendChild(atext);
+			atd.appendChild(atext);
+			nametd.appendChild(nametext);
+			emailtd.appendChild(emailtext);
+			salarytd.appendChild(salarytext); 
+			//子元素添加到父元素td添到tr
+			tr.appendChild(nametd);
+			tr.appendChild(emailtd);
+			tr.appendChild(emailtd);
+			tr.appendChild(salarytd);
+			
+			//点击函数
+			a.onclick=dele;
+			}
+			
+		}	
+		</script>
+	</head>
+	<body>
+		<table id="employeeTable">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td>Tom</td>
+			<td>tom@tom.com</td>
+			<td>5000</td>
+			<td><a href="deleteEmp?id=001">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Jerry</td>
+			<td>jerry@sohu.com</td>
+			<td>8000</td>
+			<td><a href="deleteEmp?id=002">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Bob</td>
+			<td>bob@tom.com</td>
+			<td>10000</td>
+			<td><a href="deleteEmp?id=003">Delete</a></td>
+		</tr>
+	</table>
+
+	<div id="formDiv">
+	
+		<h4>添加新员工</h4>
+
+		<table>
+			<tr>
+				<td class="word">name: </td>
+				<td class="inp">
+					<input type="text" name="empName" id="empName" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">email: </td>
+				<td class="inp">
+					<input type="text" name="email" id="email" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">salary: </td>
+				<td class="inp">
+					<input type="text" name="salary" id="salary" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button id="addEmpButton" value="abc">
+						Submit
+					</button>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		//绑定多个响应函数
+			function bind(obj , eventStr , callBack){
+				//判断obj中是否包含addEventListener
+				if(obj.addEventListener){
+					//如果addEventListener存在，则调用它来绑定事件
+					obj.addEventListener(eventStr , callBack , false);
+				}else{
+					//如果addEventListener不存在，则调用attachEvent
+					//attachEvent绑定的事件响应函数中this永远是window
+					obj.attachEvent("on"+eventStr,function(){
+						callBack.call(obj);
+					});
+				}
+				
+			}
+			window.onload=function(){
+				var box=document.getElementById("box");
+				box.onmousewheel=fun;
+				
+				//火狐浏览器
+				bind(box,"DOMMouseScroll",fun);
+				function fun(ev){
+					ev=ev||event;
+					var length=0;
+					if(ev.wheelDelta){
+						length=ev.wheelDelta>0?-10:10;
+						
+					}else{
+						//火狐
+						length=ev.detail>0?10:-10;
+					}
+					box.style.height=box.offsetHeight+length+"px";
+					
+					//火狐取消默认行为
+					if(ev.preventDefault){
+						ev.preventDefault();
+					}
+					return false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box" style="width: 100px;height: 100px;background-color: red;">
+			
+		</div>
+	</body>
+</html>

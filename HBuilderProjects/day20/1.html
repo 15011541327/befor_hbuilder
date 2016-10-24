@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		window.onload=function(){
+			
+		
+		var btn=document.getElementById("btn");
+			 my(btn,"click",function(){
+			 	alert(this);
+			 })
+			function my(obj,str,callback){
+				if(obj.addEventListener){
+					obj.addEventListener(str,callback,false);
+				}else{
+					callback.call(obj);
+					obj.attachEvent("on"+str,callback);
+				}
+			}
+			
+		}	
+			
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn">我是一个按钮</button>
+	</body>
+</html>

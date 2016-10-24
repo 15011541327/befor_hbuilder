@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			#box{
+				width:270px;
+				height: 300px;
+				background: url(img/bg.jpg) no-repeat;
+				padding: 30px 0px;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			
+			ul{
+				list-style: none;
+				position:absolute;
+				width: 2320px;
+				left: 0;
+				
+			}
+			li{
+				float: left;
+				margin: 0 10px;
+				
+			}
+			img{
+				width: 250px;
+				height: 300px;
+			}
+			#box1{
+				width: 160px;
+				position: absolute;
+				bottom: 10px;
+				margin-left: 55px;
+			}
+			a{
+				/*display: block;*/
+				width: 10px;
+				height: 10px;
+				background-color: deepskyblue;
+				float: left;
+				margin: 0 5px;
+				opacity:0.5;
+				filter: alpha(opacity:50);
+			}
+			a:hover{
+				background-color: black;
+			}
+		</style>
+		<script src="js/2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+			window.onload=function(){
+				var img=document.getElementsByTagName("img");
+				var box=document.getElementById("box");
+				var aarr=document.getElementsByTagName("a");
+				var ul=document.getElementById("ul1");
+				var L=(box.offsetWidth-box1.offsetWidth)/2+"px";
+				var num=0;
+				
+				for (var i=0;i<img.length;i++) {
+					aarr[i].index=i;
+					move(ul,"left",-270*aarr[i].index,5);
+					
+					aarr[i].onmouseenter=function(){
+						num=this.index;
+						init();
+						move(ul,"left",-270*this.index,100);
+					}
+					
+				}
+				for (var i=0;i<aarr.length;i++) {
+					aarr[i].index=i;
+					aarr[i].onclick=function(){
+						
+						move(ul,"left",-270*(this.index),5);
+					};
+				}
+				function init(){
+						for(var i=0 ; i<aarr.length ; i++){
+						aarr[i].style.backgroundColor = "";
+						
+					}
+						
+						aarr[num].style.backgroundColor="black";
+					};
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="ul1">
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+				<li><img src="img/5.jpg"/></li>
+				<li><img src="img/6.jpg"/></li>
+				<li><img src="img/7.jpg"/></li>
+				<li><img src="img/8.jpg"/></li>
+			</ul>
+			<div id="box1">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</body>
+</html>
+

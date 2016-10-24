@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//调用上下文对象
+			function sayName(){
+				
+				alert(this.name);
+			}
+			var obj1={
+				name:"beautiful",
+				fun:sayName
+			}
+			var obj2={name:"leaf",fun:sayName}
+			
+			obj1.fun();
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

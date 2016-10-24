@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//第一种工厂方法创建
+			/*function Pserson(name,age){
+				var obj = new Object();
+				obj.name=name;
+				obj.age=age;
+				obj.sayName=function(){
+					alert(this.name);
+				}
+				return obj;
+			}
+			var per1=new Pserson("一万年",10000);
+			var per2=new Pserson("tiantian",300);
+			per1.sayName();
+			alert(per1);
+			*/
+			
+			//使用构造函数创建对象
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+				this.sayName=function(){
+					alert(this.name)
+				}
+			}
+			var per1= new Person("zhuzhu",22);
+			var per2= new Person("qq",77);
+			
+			per1.sayName();
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

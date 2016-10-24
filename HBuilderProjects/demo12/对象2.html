@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//将obj2设置成obj1的属性
+			var obj1 = new Object();
+			obj1.name="lsg";
+			obj1.age=14;
+			var obj2= new Object();
+			obj2.name="wangxiaoyan";
+			obj2.age=23;
+			//console.log(obj1);
+			
+			
+			obj1.ok=obj2;
+			//console.log(obj1.ok.name);输出：wangxiaoyan
+			
+			
+			//for(var 变量名 in 对象){}
+			
+			for(var n in obj2){
+				console.log(n+":"+obj2[n]);
+			}
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

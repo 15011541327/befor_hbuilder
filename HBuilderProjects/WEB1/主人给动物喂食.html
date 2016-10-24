@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Master(){
+				
+				this.feed=function(animal,food){
+					console.log("主任给"+animal.name+"喂了"+food.weight+"斤"+food.name);
+				}
+			}
+			//食物类
+			function Food(name,weight){
+				this.name=name;
+				this.weight=weight;
+				//........
+			}
+			function Fish(name,weight){
+				this.food=Food;
+				this.food(name,weight);
+			}
+			function Bone(name,weight){
+				this.food=Food;
+				this.food(name,weight);
+			}
+			//动物类
+			function Animal(name){
+				this.name=name;
+				//.......
+			}
+			function Cat(name){
+				this.animal=Animal;
+				this.animal(name);
+			}
+			function Dog(name){
+				this.animal=Animal;
+				this.animal(name);
+			}
+			//创建食物对象
+			var fish1 = new Fish("金鱼",3);
+			//var fish2 = new Fish("鲤鱼",2); 
+			var bone = new Bone("骨头",7);
+			//创建动物对象
+			var cat1 = new Cat("小花猫");
+			//var cat2 = new Cat("大黑猫");
+			var dog = new Dog("狗狗");
+			
+			
+			var master = new Master();
+			master.feed(cat1,fish1);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 300px;
+				height: 300px;
+				background-color: gold;
+			}
+			#box{
+				width: 300px;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			function mycolor(btn,obj){
+				if(btn.value=="黑色"){
+					obj.style.backgroundColor="black";
+				}else{
+					obj.style.backgroundColor="red";
+				}
+			}
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				var box1=document.getElementById("box1");
+				btn1.onclick=function(){
+					mycolor(this,box1);
+				}
+				btn2.onclick=function(){
+					mycolor(this,box1);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="box1"></div>
+			
+			<br />
+			<input type="button" id="btn1" value="黑色" />
+			<input type="button" id="btn2" value="红色" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				position:absolute;
+				left:-300px;
+				background-color:#008000;
+				width:300px;
+				height:300px;
+			}
+			#box1{
+				position:absolute;
+				left:300px;
+				width:20px;
+				height:100px;
+				background-color:#FF0000;
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload = function () {
+			var box = document.getElementById('box');
+			box.onmouseenter = function () {
+				box.style.left=0;
+			}
+			box.onmouseleave = function () {
+				box.style.left = -300 + 'px';
+			}
+			
+		}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="box1">
+				
+			</div>
+		</div>
+	</body>
+</html>

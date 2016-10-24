@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var reg=new RegExp("a","i");
+			var flag=reg.test("bfhuwjAsdfgjn");
+			//alert(flag);true
+			
+			//i不区分大小写，g全局查找
+			reg=/ab/ig;
+			flag=reg.test("sjgijogoga/sjgijogogajhAB");
+			//alert(flag);true
+			var str="ababababjigreojiogso";
+			//alert(str.replace(reg,"你好"));//'你好你好你好你好jigreojiogso'
+			//|表示或者。[]表示或者
+			/*reg = /a[bde]c/ig;
+			
+			str = "afc abc aec ahc abc asdasda sdads";
+			
+			alert(reg.test(str));*/
+			reg=/a[jit]b/i;
+			str="jfiawijgrajBtugoaibjhu";
+			//alert(reg.test(str));//true
+			//match根据正则表达式将符合规则的字符串放到数组中，并返回
+			//alert(str.match(reg));//ajB,aib
+			
+			//g在split和seach中不起作用
+			//alert(str.split(reg));//jfiawijgr，tugo，jhu
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

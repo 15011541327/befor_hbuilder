@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	window.onload = function () {
+		var btn1 = document.getElementById('btn1');
+		var btn2= document.getElementById('btn2');
+		var img = document.getElementsByTagName('img')[0];
+		var arr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg","img/8.jpg"];
+		var timer = null;
+		var num=0;
+		btn1.onclick = function () {
+			timer = setInterval(function () {
+				num++;
+			if(num>arr.length-1){
+				num = 0;
+			}
+			img.src=arr[num];
+			},1000)
+		}
+	}
+		
+	</script>
+	<body>
+		<h1>美女刘诗诗</h1>
+		<img src="img/1.jpg"/><br />
+		<button id="btn1">开始切换图</button>
+		<button id="btn2">停止切换图</button>
+	</body>
+</html>

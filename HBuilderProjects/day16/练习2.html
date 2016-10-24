@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+				var img=document.getElementsByTagName("img")[0];
+				var imgarr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"]
+				var index=0;
+				prev.onclick=function(){
+					if(index<=0){
+						index=imgarr.length;
+					}
+					index--;	
+					img.src= imgarr[index];
+				}
+				next.onclick=function(){
+					if(index>=imgarr.length-1){
+						index=-1;
+					}
+					index++;	
+					img.src= imgarr[index];
+				}
+			}
+			
+		</script>
+		<style type="text/css">
+			.box{
+				width: 500px;
+				height: 500px;
+				background-color: #ADFF2F;
+				padding: 10px;
+				margin: 0 auto;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/1.jpg"/>
+			<button id="prev"> < </button>
+			<button id="next"> > </button>
+		</div>
+	</body>
+</html>

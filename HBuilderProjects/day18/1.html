@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#box1{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+		
+		
+		window.onload=function(){
+			
+			//IE内联样式
+			var box1=document.getElementById("box1");
+			var btn=document.getElementById("btn");
+			btn.onclick = function(){
+				
+				box1.style.backgroundColor="red";
+			 	alert(box1.style.backgroundColor);
+				
+			//火狐外部
+			var box1style=getComputedStyle(box1,null);
+				
+			}
+			
+			
+			
+		}	
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box1" ></div>
+		
+		<button id="btn">我是一个按钮</button>
+	</body>
+</html>

@@ -1,0 +1,293 @@
+body{
+	background: url(../img/polo360.png) repeat-x;	
+}
+.w{
+	width: 940px;
+	margin: 0 auto;
+	list-style: none;
+}/*清除浮动*/
+.clear:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+/*清除IE6浮动*/
+.clear{
+	zoom: 1;
+}
+.logo{
+	
+	padding: 37px 16px  0;
+}
+.header{
+	height: 159px;
+}
+.header li{
+	float: right;	
+	border-left: 1px #d6d6d6 dotted;
+	margin-top: 58px;
+	padding: 0 8px;
+}
+.header a{
+	font: 14px bold Georgia;
+	color: #666666;
+	text-decoration: none;
+}
+.header p{
+	font: 11px Tahoma;
+	color: #b7b7b7;
+}
+/*banner的部分*/
+.banner{
+	background: url(../img/banner-bg.png) no-repeat;
+	height: 358px;
+	position: relative;
+}
+/*banner导航部分*/
+.pointer{
+	position: absolute;
+	left: 18px;
+	bottom: 20px;
+}
+.pointer a{
+	background: url(../img/pointer.png) no-repeat;
+	width: 17px;
+	height: 17px;
+	float: left ;
+	margin-left: 4px;
+}
+.pointer .active{
+	background: url(../img/pointer.png) -17px 0 no-repeat;
+}
+.pointer a:hover{
+	background: url(../img/pointer.png) -17px 0 no-repeat;
+}
+
+/*内容*/
+.content h2{
+	text-align: center;
+	font: bold 24px Georgia;
+	color: #000000;
+	/*设置一个背景*/
+	background: url(../img/break.png) bottom center no-repeat;
+	padding-bottom: 24px;
+}
+.content1{
+	width: 300px;
+	margin-left: 20px;
+	padding-top: 26px;
+	float: left;
+}
+.content .firtdiv{ 
+	margin-left: 0;
+}
+.content1 h3{
+	font: 21px Georgia;
+	color: #11719e ;
+}
+.content1 .p1{
+	font: 12px  "times new roman";
+	color: #8c8c8c;
+}
+/*设置图片*/
+.content .img-bg{	
+	width: 300px;
+	height: 198px;
+	margin-top: 14px;
+	padding-top: 10px;
+	background: url(../img/content-bg.png) no-repeat;
+	text-align: center;
+}
+/*设置图片下的段落*/
+.content1 .p2{
+	font: 13px/18px Helvetica;
+	color: #3e3e3e;
+	word-spacing: 2px;
+	padding-top: 10px;
+}
+/*设置Learn More*/
+.content1 a{
+	display: block;
+	width: 163px;
+	height: 40px;
+	background: url(../img/lernmore.png) no-repeat;
+	padding-top: 12px;
+	margin-top: 12px;
+	text-indent: 12px;
+	text-decoration: none;
+	font: 12px  "times new roman";
+	color: #016999;
+}
+/*内容2*/
+.content2{
+	background: url(../img/break.png) no-repeat top center;
+	margin-top: 35px;
+	
+}
+.content2 .contact{
+	width: 300px;
+	height: 380px;
+	float: left;
+	margin-left: 20px;	
+}
+/*第一个盒子*/
+.content2 .firstdiv{
+	margin-left: 0;
+}
+.content2 .title{
+	border-bottom: 1px #d3d3d3 dotted;
+	height: 27px;
+	font: 18px Georgia;
+	color: #444444;
+	margin-top: 40px;
+}
+.content2 .box1{
+	font: 12px "times new roman";
+	color: #444444;
+	height: 100px;
+}
+/*图片链接*/
+.content2 .a1{
+	display: block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/rss.png) no-repeat;
+	float: left;
+}
+.content2 .a2{
+	display: block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/fb.png) no-repeat;
+	float: left;
+}
+.content2 .a3{
+	display: block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/in.png) no-repeat;
+	float: left;
+}
+.content2 .a4{
+	display: block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/yt.png) no-repeat;
+	float: left;
+}
+.content2 .a5{
+	display: block;
+	width: 57px;
+	height: 57px;
+	background: url(../img/tw.png) no-repeat;
+	float: left;
+}
+.content2 .title2{
+	height: 22px;
+	font: 18px bold Gill Sans MT;
+	color: #444444;
+	border-bottom: 1px #d3d3d3 dotted;
+	margin-top: 40px;
+} 
+.content2 .p2{
+	height: 37px;
+	font: 12px "times new roman";
+	margin-top: 14px;
+}
+.content2 .form1{
+	height: 76px;
+	color: #444444;
+}
+.content2 .text1{
+	padding: 0;
+	width: 296px;
+	height: 33px;
+	background: url(../img/text.gif) no-repeat;
+	border: none;
+	resize: none;
+}
+/*第二个盒子*/
+.content2 .form2{
+	height: 290px;
+}
+.text{
+	padding: 0;
+	width: 296px;
+	height: 33px;
+	background: url(../img/text.gif) no-repeat;
+	border: none;
+	resize: none;
+	margin-top: 16px;
+}
+.textarea{
+	padding: 0;
+	width: 296px;
+	height: 134px;
+	background: url(../img/textarea.gif);
+	border: none;
+	resize: none;
+	margin-top: 16px;
+}
+.submit{
+	padding: 0;
+	width: 160px;
+	height: 32px;
+	background: url(../img/submit.gif) no-repeat;
+	border: none;
+	resize: none;
+	margin-top: 10px;
+	font: 13px Georgia;
+	color: #ffffff;
+	text-align: left;
+	text-indent: 2px;
+}
+/*第盒子三个*/
+.content2 .p3{
+	height: 67px;
+	font: 12px "times new roman";
+	color: #444444;
+	margin-top: 14px;
+	border: 1px #D3D3D3 dotted;
+}
+.content2 .img1{
+	float: left;
+	padding-right: 8px;
+}
+
+/*页脚部分*/
+.footer{
+	width: 1600px;
+	height: 183px;
+	background: url(../img/foot.gif) no-repeat;
+	font: 11px "times new roman";
+	color: #999999;
+	text-align: left;
+	position: relative;
+}
+.footer a{
+	text-decoration: none;
+	font: 11px "times new roman";
+	color: #999999;
+}
+.foot1{
+	position: absolute;
+	margin-left:338px;
+	margin-top: 27px;
+}
+.foot2{
+	position: absolute;
+	margin-left: 970px;
+	margin-top: 27px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

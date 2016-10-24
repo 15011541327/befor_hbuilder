@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			var a;
+			//console.log(typeof a);输出undefined;
+			//a=a.tostring();
+			//console.log(typeof a);//输出：Cannot read property 'tostring' of undefined"
+			a=String(a);
+			//console.log(typeof String(a));输出string
+			//console.log(a)
+			
+			//使用Number()、 ParseInt()、 ParseFloat()函数，其他类型转换为数字
+			var str;
+			str="123";
+			str=Number(str);
+			//console .log(str)输出:123;
+			str="12px"
+			str=Number(str);
+			//console .log(str);输出:NaN;
+			str="wodejia";
+			str=Number(str);
+			//console .log(str)输出:NaN;
+			str= true;
+			str=Number(str);
+			//console.log(str);输出：1;布尔类型
+			str= null;
+			str=Number(str);
+			//console.log(str);输出：0;空置
+			str= undefined;
+			str=Number(str);
+			//console.log(str);输出：NaN;未定义类型
+			
+			//ParseInt这个函数只使用于字符串
+			str="12px";
+			str=parseInt(str);
+			//console.log(str);输出:12;
+			str="45a67";
+			str=parseInt(str);
+			//console.log(str);输出:45;
+			str="wodejia";
+			str=parseInt(str);
+			//console.log(str);输出：NaN;
+			str= true;
+			str=parseInt(str);
+			//console.log(str);输出：NaN;布尔类型
+			str= null;
+			str=parseInt(str);
+			//console.log(str);输出：NaN;空值；
+			str= undefined;
+			str=parseInt(str);
+			//console.log(str);输出：NaN;未定义
+			
+			//ES3和ES5中有一些区别，
+			str="070"/*这个数在ES3中，被解析成8进制；
+			要在ParseInt()第二个参数中指定，来告诉浏览器数据类型；
+			* */
+			//因为这个问题，所以使用parseInt往往我们都需要在第二个参数，设置一个10
+			str=parseInt(str,10);
+			//alert(str);
+			
+			
+			//ParseFloat()与ParseInt()类似
+			str=123.678947
+			//console.log(str);输出:123.678947;
+			str="12px.9432";
+			str=parseFloat(str);
+			//console.log(str);输出:12;
+			str="123.76d"
+			str=parseFloat(str);
+			//console.log(str);输出:123.76;
+			
+			
+			//布尔类型转换；Boolean()
+			var bool="12";
+			bool=Boolean(bool);
+			//console.log(bool)；输出：true;
+			
+			
+			
+			
+			/*运算符
+			 * a=1;
+			//console.log(a);
+			var b=a++;
+			console.log(b);
+			console.log(a);
+			var c=++a;
+			console.log(c);
+			console.log(a);
+			
+			*/
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

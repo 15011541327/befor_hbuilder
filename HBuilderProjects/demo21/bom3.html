@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				var btn3=document.getElementById("btn3");
+				btn1.onclick=function(){
+					//innerWidth/innerHeight可以获取浏览器窗口内部的大小
+					//outerWidth/outerHeight
+					//不兼容IE8
+				/*	window.onresize = function(){
+				console.log(document.documentElement.clientWidth+","+document.documentElement.clientHeight);
+				}*/
+					//window.open()
+					
+					window.open("1.html","win2","height:500px,width:300px")
+				}
+				//关闭新窗口
+				btn2.onclick=function(){
+					Win2.close();
+				}
+				//关闭窗口
+				btn3.onclick=function(){
+					window.close();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1">弹出一个窗口</button>
+		<button id="btn2">关闭窗口</button>
+		<button id="btn3">关闭当前窗口</button>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//原型对象；
+			function Person(){
+				
+			}
+			Person.prototype.name="zhangsan";
+			
+			var per1= new Person();
+			var per2= new Person();
+			
+			//console.log(per1.__proto__==Person.prototype);//true
+			//console.log(per2.name);//"zhangsan"
+			per2.name="lisi";
+			//console.log(per2.name);//"lisi"
+			
+			//console.log(Person.__proto__);
+			
+			
+			var a=Person.prototype;
+			console.log(a);//[object Object]
+			var b=a.__proto__;
+			console.log(b);//[object Object]
+			var c=b.__proto__;
+			console.log(b);//[object Object]
+			var d=c.__proto__;
+			console.log(b);//null
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

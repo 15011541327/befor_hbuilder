@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<style type="text/css">
+			*{margin:0;padding:0;list-style: none;}
+			#wrap{
+				position:relative;
+				width:320px;
+				height:320px;
+				margin: 0 auto;
+				background-color: blueviolet;
+				overflow: hidden;
+			}
+			#list{
+				position:absolute;
+				width:2880px;
+			}
+			#list li{
+				float:left;
+				margin: 10px;
+			}
+			#list li img{
+				display:block;
+				width:300px;
+				height:300px;
+			}
+			#point{
+				position:absolute;
+				bottom:10px;
+				width:100%;
+				text-align: center;
+				}
+			#point a{
+				display: inline-block;
+				width:10px;
+				height:10px;
+				border-radius:50%;
+				background-color:yellow;
+			}
+		</style>
+		<script src="js/1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload = function () {
+				var wrap = document.getElementById('wrap');
+				var list = document.getElementById('list');
+				var point = document.getElementById('point');
+				var lis = document.getElementsByTagName('li');
+				var arr = document.getElementsByTagName('a');
+				//初始化
+				arr[0].style.backgroundColor = '#000';
+				autochange();
+				var num = 0
+				var timer = null;
+				for (var i=0; i<arr.length; i++) {
+					arr[i].index = i;
+					arr[i].onmouseenter = function () {
+						num = this.index;
+						move(list,'left',-320*num,100,function () {
+							init();
+						});
+					}
+				}
+				function autochange () {
+					timer = setInterval(function () {
+						num++;
+						/*if(num>lis.length - 1){
+							num = 0;
+						}*/
+						move(list,'left',-320*num,100,function () {
+							init();
+						})
+						
+					},2000)
+				}
+				function init () {
+					if(num>=lis.length-1){
+						num = 0;
+						list.style.left = 0;
+					}
+					for (var i = 0; i<arr.length; i++) {
+						arr[i].style.backgroundColor = '';
+					}
+					arr[num].style.backgroundColor = '#000';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul id="list">
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+				<li><img src="img/5.jpg"/></li>
+				<li><img src="img/6.jpg"/></li>
+				<li><img src="img/7.jpg"/></li>
+				<li><img src="img/8.jpg"/></li>
+				<li><img src="img/1.jpg"/></li>
+			</ul>
+			<div id="point">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</body>
+</html>

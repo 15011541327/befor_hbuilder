@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			debugger;
+			var a="hello";
+			var b=9;
+			function fun1(){
+				alert("hello")
+			}
+			var fun2= function(){
+				alert(9);
+			}
+			//根据EMCA规定，不要在流程控制语句中使用（函数声明表达式）去创建函数
+			//js中没有块级作用域，写在条件判断语句的内容和写在全局环境中是一样的；
+				
+			if (true){
+				function fun(){alert(4);}
+				var a=function(){alert(5);}
+			}
+				fun();
+				
+				a();
+				
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

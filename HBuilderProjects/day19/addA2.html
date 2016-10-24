@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var btn = document.getElementById('btn');
+				btn.onclick = function () {
+					var ul = document.getElementsByTagName('ul')[0];
+					ul.innerHTML += "<li><a href = '###'>我是新添加的a标签</a></li>";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a herf="###">我是a链接</a>
+			</li>
+		</ul>
+		<button id="btn">添加a</button>
+	</body>
+</html>

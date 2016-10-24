@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		
+			table{
+				width: 500px;
+				height: 100px;
+				border: 1px silver solid;
+				text-align: center;
+				margin: 0 auto;
+			}
+			td{
+				border: 1px silver solid;
+			}
+			img{
+				width: 50px;
+				height: 50px;
+			}
+			#box{
+				width: 900px;
+				height: 400px;
+				position: relative;
+				background: url(img/homebg.jpg) no-repeat;
+				background-size: 900px 400px;
+				margin: 0 auto;
+			}
+			#cat{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 20px;
+			}
+			#mouse{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+			}
+		</style>
+		<script type="text/javascript">
+			function move(objcat,objmouse,dir,speed){
+				//猫咪移动
+				switch (dir){
+					 	case 37:
+						objcat.style.left=objcat.offsetLeft-speed+"px";
+							break;
+						case 38:
+						objcat.style.top=objcat.offsetTop-speed+"px";
+							break;
+						case 39:
+						objcat.style.left=objcat.offsetLeft+speed+"px";
+							break;
+						case 40:
+						objcat.style.top=objcat.offsetTop+speed+"px";
+							break;
+					}
+				//获取猫咪与老鼠的距离
+				var catleft=Math.abs(parseInt(objcat.offsetLeft-objmouse.offsetLeft));
+				var cattop=Math.abs(parseInt(objcat.offsetTop-objmouse.offsetTop));
+				if (catleft<50&& cattop<50) {
+					alert("恭喜！捉到了")
+					objcat.style.left=0;
+					objcat.style.top=0;
+				}
+				
+				
+				
+			}
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				var btn3=document.getElementById("btn3");
+				var btn4=document.getElementById("btn4");
+				var cat=document.getElementById("cat");
+				var mouse=document.getElementById("mouse");
+				document.onkeydown=function(ev){
+					ev=ev||event;
+					move(cat,mouse,ev.keyCode,10);
+				}
+				btn1.onclick=function(){
+					move(cat,mouse,37,10);
+				}
+				btn2.onclick=function(){
+					move(cat,mouse,38,10);
+				}
+				btn3.onclick=function(){
+					move(cat,mouse,39,10);
+				}
+				btn4.onclick=function(){
+					move(cat,mouse,40,10);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="0">
+			<tr><th colspan="3">Header</th></tr>
+			<tr>
+				<td></td>
+				<td><input type="button" id="btn2" value="向上移动" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="button" id="btn1" value="向左移动" /></td>
+				<td></td>
+				<td><input type="button" id="btn3" value="向右移动" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" id="btn4" value="向下移动" /></td>
+				<td></td>
+			</tr>
+		</table>
+		<div id="box">
+			<div id="cat"><img src="img/cat.jpg"/></div>
+		 	<div id="mouse"><img src="img/mouse.jpg"/></div>	
+		</div>
+	</body>
+</html>

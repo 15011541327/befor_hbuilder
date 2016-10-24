@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			img{
+				width: 50px;
+				height: 50px;
+				border: none;
+				position: absolute;
+			}
+			#box{
+				width: 1000px;
+				height: 300px;
+				background-color: black;
+				margin: 0 auto;
+				position: relative;
+			}
+			#control{
+				margin: 0 auto;
+				width: 520px;
+				height: 300px;
+			}
+			table{
+				margin: 50px auto;
+				width: 500px;
+				height: 100px;
+				border: 1px silver dotted;
+				text-align: center;
+			}
+			td{
+				border: 1px silver solid;
+			}
+		</style>
+		<script type="text/javascript">
+			//设计mario
+			
+				
+				function Mariomove(obj,dir,speed){
+					
+					switch (dir){
+						
+					 	case 0:
+						obj.style.top=obj.offsetTop-speed+"px";
+							break;
+						case 1:
+						obj.style.left=obj.offsetLeft+speed+"px";
+							break;
+						case 2:
+						obj.style.top=obj.offsetTop+speed+"px";
+							break;
+						case 3:
+						obj.style.left=obj.offsetLeft-speed+"px";
+							break;
+					}
+				}
+			
+			window.onload=function(){
+				var img=document.getElementById("img1");
+				var btn1=document.getElementById("btn1");
+				var btn2=document.getElementById("btn2");
+				var btn3=document.getElementById("btn3");
+				var btn4=document.getElementById("btn4");
+				btn1.onclick=function(){
+					Mariomove(img,0,10);
+				}
+				btn2.onclick=function(){
+					Mariomove(img,1,10);
+				}
+				btn3.onclick=function(){
+					Mariomove(img,2,10);
+				}
+				btn4.onclick=function(){
+					Mariomove(img,3,10);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<img id="img1" src="img/1.jpg"/>
+		</div>
+		<div id="control">
+			<table cellspacing="0" cellpadding="0">
+				<tr><th colspan="3">游戏键盘</th></tr>
+				<tr>
+					<td></td>
+					<td><input id="btn1" type="button" value="↑&nbsp;&nbsp;&nbsp;&nbsp;↑" /></td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td><input id="btn4" type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;&nbsp;&nbsp;&nbsp;" /></td>
+					<td></td>
+					<td><input id="btn2" type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;&nbsp;" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input id="btn3" type="button" value="↓&nbsp;&nbsp;&nbsp;&nbsp;↓" /></td>
+					<td></td>
+				</tr>
+				
+			</table>
+		</div>
+	</body>
+</html>

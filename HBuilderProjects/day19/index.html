@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function myclassname(cn){
+				//获取元素
+				var arr = document.all;
+				//正则
+				var reg = new RegExp("\\b"+cn+"\\b")
+				//新数组
+				var arr2=[];
+				//获取元素的名字
+				for (var i=0;i<arr.length;i++) {
+					var classname=arr[i].className;
+					if(reg.test(classname)){
+						arr2.push(arr[i]);
+					}
+				}
+				return arr2;
+			}
+			window.onload=function(){
+				//
+				var inp=myclassname("inp");
+				//电子邮件设置
+				inp[0].style.color="silver";
+				inp[0].onfocus=function(){
+					this.style.color="black";
+					if(this.value == this.defaultValue){
+						this.value="";
+					}
+					
+				}
+				inp[0].onblur=function(){
+					if(this.value==""){
+						this.value=this.defaultValue;
+						this.style.color="silver";
+					}
+				}
+				//另外两个
+				for (var i=1;i<inp.length;i++) {
+					inp[i].style.color="silver";
+					inp[i].onfocus=function(){
+						this.style.color="black";
+						if(this.value == this.defaultValue){
+							this.value="";
+							this.type="password";
+						}
+					
+					}
+					inp[i].onblur=function(){
+						if(this.value==""){
+							this.value=this.defaultValue;
+							this.style.color="silver";
+							this.type="text";
+						}
+						
+					}
+				}
+				//验证
+				
+				var emailReg = /^[\w]+(\.[\w]+)*@[a-z0-9]+(\.[a-z]{2,5}){1,2}$/i;
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>欢迎用户注册</h1>
+		<form action="target.html">
+			<div>
+				<label>电子邮件:</label>
+				<input class="inp" type="text" name="email" value="请输入电子邮件"/>
+				<span></span>
+			</div>
+			<div>
+				<label>密&emsp;&emsp;码:</label>
+				<input class="inp" type="text" name="password" value="请输入密码" />
+				<span></span>
+			</div>
+			<div>
+				<label>确认密码:</label>
+				<input class="inp" type="text" name="repwd" value="再输入一次密码" />
+				<span></span>
+			</div>
+			<input type="submit" value="注册" />		
+	</body>
+</html>

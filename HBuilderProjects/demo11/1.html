@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			//if语句
+			/*var i=1;
+			if(i>0){
+				console.log(i);
+			}
+			//if、else语句
+			var a=3;
+			var b=5;
+			if (a>b) {
+				console.log(a+"比较大");
+			} else{
+				console.log(b+"比较大");
+			}*/
+			/*
+			 * 	从键盘输入小明的期末成绩:
+			 *	当成绩为100时，'奖励一辆BMW'
+			 *	当成绩为[80-99]时，'奖励一台iphone15s'
+			 *	当成绩为[60-80]时，'奖励一本参考书'
+			 *	其他时，什么奖励也没有
+			 */
+			/*var s=prompt("输入小明的成绩：")
+			if (s>100) {
+				console.log("输入错误")
+			} else if(s==100){
+				console.log("奖励一辆BMW")
+			}else if (s>80 && s<99) {
+				console.log("奖励一台iphone15s")
+			} else if(s>60 && s<80){
+				console.log("奖励一本参考书")
+			}else{
+				console.log("没有奖励")
+			}*/
+			/*
+			 * 	大家都知道，男大当婚，女大当嫁。那么女方家长要嫁女儿，当然要提出一定的条件： 
+			 *	高：180cm以上; 富:1000万以上; 帅:500以上;
+			 *	如果这三个条件同时满足，则:'我一定要嫁给他'
+			 *	如果三个条件有为真的情况，则:'嫁吧，比上不足，比下有余。' 
+			 *	如果三个条件都不满足，则:'不嫁！' 
+			 */
+			/*var num1=prompt("输入男方身高：")
+			var num2=prompt("输入男方财富：")
+			var num3=prompt("输入男方颜值：")
+			if (num1>=180 && num2 >= 1000 && num3>=500) {
+				console.log("我一定要嫁给他")
+			} else if(num1>=180 || num2 >= 1000 || num3>=500){
+				console.log("嫁吧，比上不足，比下有余。")
+			}else{
+				console.log("不嫁！")
+			}*/
+			/*
+			 * 	编写程序，由键盘输入三个整数分别存入变量num1、num2、num3，
+			 * 	对他们进行排序，并且从小到大输出。
+			 */
+			var a=prompt("请输入一个数：")
+			var b=prompt("请输入一个数：")
+			var c=prompt("请输入一个数：")
+			
+			if (a>b) {
+				if(a>c){
+					if(b>c){
+						console.log(c+","+b+","+a)
+					}else{
+						console.log(b+","+c+","+a)
+					}
+				}else{
+					console.log(a+","+a+","+c);
+				}
+			} else if(a>c){
+				console.log(c+","+a+","+b);
+			}else if(c>b){
+				console.log(a+","+b+","+c);
+			}else{
+				console.log(a+","+c+","+b);
+			}
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

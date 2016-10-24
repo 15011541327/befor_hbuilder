@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*根据不同按键向不同的方向移动div
+			 	如果按 <- 向左移动
+			 	如果按 -> 向右移动 
+			 	。。。。
+			 * */
+			window.onload=function(){
+				var box=document.getElementById("box1");
+				document.onkeydown=function(ev){
+					ev=ev||event;
+					var speed=10;
+					if(ev.ctrlKey){
+						speed=50;
+					}
+					switch (ev.keyCode){
+						//向左
+						case 37:
+						box.style.left=box.offsetLeft-speed+"px";
+							break;
+						//向上
+						case 38:
+						box.style.top=box.offsetTop-speed+"px";
+							break;
+						//向右
+						case 39:
+						box.style.left=box.offsetLeft+speed+"px";
+							break;
+						//向下
+						case 40:
+						box.style.top=box.offsetTop+speed+"px";
+							break;
+						
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 100px; height: 100px; background: red; position: absolute;"></div>
+
+	</body>
+</html>

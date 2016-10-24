@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				border: 1px red solid;
+				/*Ie6中用zoom开启Haslayout*/
+				/*zoom: 1;
+				overflow: hidden;*/
+			}
+			.box2{
+				border: 1px blue solid;
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			.box1:after{
+				content:"far";
+				display: block;
+				clear: both;
+			
+			}
+			.box1:before{
+				content: "ghjfj";
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1">
+			<div class="box2">
+			
+		</div>
+		</div>
+	</body>
+</html>

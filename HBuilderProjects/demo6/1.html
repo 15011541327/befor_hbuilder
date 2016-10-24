@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+			}
+			.box1{
+				background-color: red;
+				position: relative;
+				/*优先级*/
+				z-index: 2;
+			}
+			/*相对定位*/
+			.box2{
+				background-color: blue;
+				position: relative;
+				left: 100px;
+				bottom: 100px;	
+				/*优先级*/
+				z-index: 1;
+			}
+			
+			
+			.box3{
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		
+	</body>
+</html>

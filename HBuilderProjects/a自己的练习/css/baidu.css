@@ -1,0 +1,348 @@
+.wrapper{
+	/*border: 1px solid black;*/
+	max-width: 960px;
+	min-width: 400px;
+	margin: 0 auto;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.head ul{
+	float: right;
+}
+.head li{
+	float: left;
+	
+	
+}
+.head a{
+	display: block;
+	font-size: 0.5rem;
+	color: black;
+	margin: 2px 0;
+	padding: 0 3px;
+	border-right: 1px solid #F0F0F0;
+}
+#header-left a{
+	font-size: 0.7rem;
+	color: #999;
+}
+a:hover{
+	text-decoration: none;
+}
+.clear:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+/*<!--头部-->*/
+header{
+	margin-top: 15px;
+}
+header li{
+	/*border: 1px solid red;*/
+	float: left;
+	margin-left: 0.8%;
+}
+header ul{
+	margin-left: 9%;
+}
+#header-right a{
+	font-size: 0.6rem;
+}
+header .table{
+	width: 60%;
+	margin: 10px 10px;
+	/*border: 1px solid red;*/
+	display: table;
+	margin-left: 0;
+}
+header .cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+header .cell-left{
+	width: 17%;
+}
+header .cell-center{
+	width: 60%;
+}
+header input{
+	height: 25px;
+	width: 99%;
+	outline: none;
+}
+header img{
+	height: 30px;
+	width: 100%;
+}
+/*导航栏*/
+nav{
+	height: 30px;
+	background-color: #2b2b2b;
+}
+nav li{
+	float: left;
+	padding: 5px;
+}
+nav a{
+	display: block;
+	vertical-align: center;
+	color: #FFFFFF;
+	font-size: 0.8rem;
+}
+nav li:hover{
+	background-color: blue;
+}
+.ul4{
+	float: right;
+}
+/*<!--第一部分内容-->*/
+.first{
+	border: 1px solid black;
+}
+.first .left,.first .right{
+	float: left;
+	width: 20%px;
+	/*border: 1px solid black;*/
+}
+.first .center{
+	float: left;
+	width: 50%;
+}	
+/*<!--左轮播图-->*/
+.first .left{
+	background: url(../img/bg.jpg) no-repeat;
+	position: relative;
+	width: 192px;
+	height: 250px;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+#ul5{
+	
+	position: absolute;
+	left: 0;
+	width: 1820px;
+	/*border: 1px solid red;*/
+	
+}
+#ul5 li{
+	float: left;
+	margin: 0.7%;
+	width: 9%;
+}
+#ul5 img{
+	display: block;
+	height: 200px;
+	width: 100%;
+}	
+#alist{
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	/*background-color: green;*/
+	/*border: 1px solid green;*/
+	width: 100px;
+	height: 10px;
+	/*z-index: 100;*/
+}
+	
+.first .a1{
+	
+	display: block;
+	float: left;
+	/*border: 1px solid black;*/
+	border-radius: 50%;
+	width: 8%;
+	height: 80%;
+	margin: 0 1%;
+	background-color: #FFFFFF;
+	/*opacity: 0.5;
+	filter: alph(opacity:0.5);*/
+}
+/*中间部分*/
+#plist{
+	
+}
+/*第一部分右边长度*/
+/*标题样式*/
+.right h2{
+	font-size: 1.2rem;
+}
+.right a{
+	font-size: 0.9rem;
+}
+.right img{
+	width: 100%;
+}
+.btn1{ 
+	display: block;
+	float: left;
+	/*border: 1px solid red;*/
+	width: 50px;
+	height: 20px;
+}
+
+ .more a:hover{
+ 	background-color: plum;
+ } 
+/*第一张*/
+.more1{
+	position: relative;
+	width: 100%;
+	/*height: 250px;*/
+	/*background-color: greenyellow;*/
+}
+.morecontent1{
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	width: 250px;
+	height: 210px;
+/*	background-color: greenyellow;*/
+	font-size: 0.6rem;
+}
+.more1:hover .morecontent1{
+	display: block;
+}
+/*第二张*/
+.more2{
+	position: relative;
+	width: 100%;
+	/*height: 250px;*/
+	top:-20px;
+	left: 50px;
+	/*background-color: greenyellow;*/
+}
+.morecontent2{
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: -50px;
+	width: 250px;
+	height: 210px;
+	/*background-color: greenyellow;*/
+	font-size: 0.6rem;
+}
+.more2:hover .morecontent2{
+	display: block;
+}
+
+/*第三张*/
+.more3{
+	position: relative;
+	width: 100%;
+	top:-40px;
+	left: 100px;
+	/*height: 250px;*/
+	/*background-color: greenyellow;*/
+}
+.morecontent3{
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: -100px;
+	width: 250px;
+	height: 210px;
+	/*background-color: greenyellow;*/
+	font-size: 0.6rem;
+}
+.more3:hover .morecontent3{
+	display: block;
+}
+
+/*第四张*/
+.more4{
+	position: relative;
+	width: 100%;
+	top:-60px;
+	left: 150px;
+	/*height: 250px;*/
+	/*background-color: greenyellow;*/
+}
+.morecontent4{
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	top: 60px;
+	left: -150px;
+	width: 250px;
+	height: 210px;
+	/*background-color: greenyellow;*/
+	font-size: 0.6rem;
+}
+.more4:hover .morecontent4{
+	display: block;
+}
+/*第五张*/
+.more5{
+	position: relative;
+	width: 100%;
+	top:-80px;
+	left: 200px;
+	/*height: 250px;*/
+	/*background-color: greenyellow;*/
+}
+.morecontent5{
+	margin-top: 20px;
+	display: none;
+	position: absolute;
+	top: 80px;
+	left: -200px;
+	width: 250px;
+	height: 210px;
+	/*background-color: greenyellow;*/
+	font-size: 0.6rem;
+}
+.more5:hover .morecontent5{
+	display: block;
+}
+
+/*字体和图片样式*/
+
+.a2 a{
+	color: #2B2B2B;
+	font-size: 0.6rem;
+}
+.a2 a:hover,.a2 a:active{
+	color: #666;
+}
+.right p{
+	color: #666666;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*自适应字体大小*/
+@media only screen and (max-width: 900px) {
+	html{
+		font-size: 12px;
+	}
+	
+}
+
+
+
+
+
+
+
+

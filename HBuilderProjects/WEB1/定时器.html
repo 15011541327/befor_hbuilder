@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=init;
+			function init(){
+				window.setInterval("start2()",1000)
+			}
+			var i=1;
+			
+			function start2(){
+				var obj=document.getElementById("img1");
+				
+				obj.src="img/"+i+".png";
+				i++;
+				if(i>3){
+					i=1;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<img id="img1" src="img/1.png"/>
+	</body>
+</html>

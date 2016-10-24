@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title><script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				btn.onclick=function(){
+					window.history.go(-2);
+				};
+				var btn2=document.getElementById("btn2");
+				btn2.onclick=function(){
+					window.location = "http://www.baidu.com";
+				};
+				var btn3=document.getElementById("btn3");
+				btn3.onclick=function(){
+					window.location.replace("http://www.baidu.com");
+				};
+			}
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">回退2</button><br />
+		<button id="btn2">replace</button>
+		<button id="btn3">replace2</button>
+	</body>
+</html>

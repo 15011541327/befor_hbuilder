@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//外部函数执行完以后，内部函数依然可以访问到外部函数的变量，这个特性叫闭包
+			//函数的作用域实在函数定义时决定的，不是在函数调用时决定的
+			var a=4;
+			function fun(){
+				var a=1;
+				function fun1(){
+					alert(a);
+				}
+				return fun1;
+			}
+			var result=fun();
+			alert(a);
+			result();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

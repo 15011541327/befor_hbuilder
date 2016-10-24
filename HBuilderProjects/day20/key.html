@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var inp=document.getElementById("inp");
+				inp.onkeydown=function(ev){
+					ev=ev||event;
+					if(ev.keyCode>=48&&ev.keyCode<=58){
+						return false;
+					}
+				}
+				inp.onkeyup=function(ev){
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+	<input type="text" id="inp"  />
+	</body>
+</html>

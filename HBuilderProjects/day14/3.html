@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习</title>
+		<script type="text/javascript">
+			var obj={
+				
+				foo: "bar",
+				
+				fun1: function(){
+					
+					var self=this;
+					
+					console.log(this.foo);//bar
+					console.log(self.foo);//bar
+				
+				(function(){
+					console.log(this.foo);//undefined
+					console.log(self.foo);//bar
+					}())
+				
+				}
+			}
+			obj.fun1();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				//btn.onclick一次只能绑定一个响应函数
+				//addEventListener添加事件监听器,ie8以下不支持
+				/*btn.addEventListener("click",function(){
+					alert("我是第一个");
+				},false);
+				btn.addEventListener("click",function(){
+					alert("我是第二个");
+				},false);*/
+				
+				//ie支持attachEvent
+				/*btn.attachEvent("onclick",function(){
+					alert(1);
+				});
+				btn.attachEvent("onclick",function(){
+					alert(2);
+				});
+				*/
+				//attachEvent绑定的回调函数中this永远是window
+				bind(btn,"click",function(){
+					alert(this);
+				});
+				function bind(obj,str,callback){
+					if(obj.addEventListener){
+						obj.addEventListener(str,callback,false);
+					}else{
+						obj.attachEvent("on"+str,function(){
+							callback.call(obj);
+						})
+					}
+					
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn">我是一个按钮</button>
+	</body>
+</html>

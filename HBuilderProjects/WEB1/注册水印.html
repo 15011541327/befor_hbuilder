@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+		function getclassname(name){
+			var arr=[];
+			var all=document.all;
+			var reg=new RegExp("\\b"+name+"\\b");
+			for (var i=0;i<all.length;i++) {
+				//获取classname
+				var namearr=all[i].className;
+				if(reg.test(namearr)){
+					arr.push(all[i]);
+				}
+			}
+			return arr;
+		}
+		window.onload=function(){
+			var inp=getclassname("inp");
+			inp[0].onfocus=function(){
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<lable>用户名字：</lable>
+			<input type="text" name="username"  class="inp" value="请输入用户名" />
+		</div>
+		<div id="box2">
+			<lable>密&emsp;&emsp;码：</lable>
+			<input type="text" name="password" class="inp" value="请输入密码" />
+		</div>
+		<div id="box3">
+			<lable>再次确认：</lable>
+			<input type="text" name="password" class="inp" value="再次确认密码" />
+		</div>
+	</body>
+</html>

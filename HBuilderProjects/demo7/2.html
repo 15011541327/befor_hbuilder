@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		table{
+			border: 1px black solid;
+			/*border-spacing: 0;*/
+			border-collapse: collapse;
+			width: 300px;
+			margin: 0 auto;
+		}
+		td,th{
+			border: 1px black solid;
+		}
+		th{
+			color: red;
+		}
+		/*设置一个tr的背景颜色
+		 如果传odd,表示选择奇数位置的元素
+		 如果传even,表示选择偶数位置的元素
+		 * */
+		tr:nth-of-type(even){
+			background-color: greenyellow;
+		}
+		tbody > tr:hover{
+			background-color: yellow;
+		}
+		</style>
+		</table>
+	</head>
+	<body>
+		<table>
+			<caption>信息表</caption>
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>住址</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>男</td>
+				<td>周杰伦</td>
+				<td>台湾</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>女</td>
+				<td>蔡依林</td>
+				<td>台湾</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>男</td>
+				<td>王羲之</td>
+				<td>山东</td>
+			</tr>
+		</table>
+		
+		
+	</body>
+</html>

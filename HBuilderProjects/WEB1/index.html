@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			/*获取r1*/
+			
+			/*设置变量*/
+			var i=0;
+			var timer;
+			/*函数*/
+			function start2(){
+				var inObj=document.getElementById("r1");
+				inObj.value="该程序运行了"+i+"秒";
+				i++;
+				timer=window.setTimeout("start2()",2000)
+			}
+			function stop2(){
+				window.clearTimeout(timer)
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input id="r1" type="button" value="该程序运行了0秒" /><br />
+		<input type="button" value="开始" onclick="start2()" />
+		<input type="button" value="结束" onclick="stop2()" />
+
+
+	</body>
+
+</html>

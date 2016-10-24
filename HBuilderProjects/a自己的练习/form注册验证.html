@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				color: silver;
+			}
+		</style>
+		<script type="text/javascript">
+		/*获取classname函数*/
+		function getclassName(cn){
+			var arr=[];
+			var reg=new RegExp("\\b"+cn+"\\b");
+			var all=document.all;
+			for (var i=0;i<all.length;i++) {
+				var classname=all[i].className;
+				if(reg.test(classname)){
+					arr.push(all[i]);
+				}
+			}
+			return arr;
+		}
+			window.onload=function(){
+				var email=document.getElementsByName("email")[0];
+				var pws=document.getElementsByName("pws")[0];
+				var inp=getclassName("inp");
+				/*console.log(inp.length);*/
+				for (var i=0;i<inp.length;i++) {
+					inp[i].onfocus=function(){
+					if(this.value==this.defaultValue){
+						this.value="";
+					this.style.color="black";
+					if(this.name=="pws"||"repws"){
+						this.type="password";
+					}
+					}
+					
+				}
+				inp[i].onblur=function(){
+					if(this.value==""){
+						this.value=this.defaultValue;
+						this.style.color="silver";
+						if(this.name=="pws"||"repws"){
+							this.type="text";
+						}
+					}
+				}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<h1>用户注册</h1>
+		<form action="#" method="post">
+			<lable>电子邮件:</lable>
+			<input type="text" name="email" class="inp" value="请输入用户名" /><br />
+			<lable>密&emsp;&emsp;码:</lable>
+			<input type="text" name="pws" class="inp" value="请输入密码" /><br />
+			<lable>确认密码:</lable>
+			<input type="text" name="repws" class="inp" value="再次确认密码" /><br />
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

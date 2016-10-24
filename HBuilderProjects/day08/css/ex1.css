@@ -1,0 +1,300 @@
+/*网页整体*/
+.all{
+	width: 940px;
+	margin: 0 auto;
+	list-style: none;
+	
+}
+body{
+	
+	background: url(../img/polo360.png) repeat-x;
+}
+/*清除浮动*/
+.clear:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+/*清除IE6的浮动*/
+.clear{
+	zoom: 1;
+}
+a{
+	text-decoration: none;
+}
+/*LOGO部分*/
+.header2{
+	height: 159px;
+}
+/*LOGO图片的部分*/
+.header2 img{
+	padding: 37px 0 0 16px;
+}
+/*无序列表超链接*/
+.header2 li{
+	float: right;
+	margin-top:  58px;
+	padding: 10px;
+	border-left: 1px #D6D6D6 dotted;
+}
+.header2 a{
+	font: bold 14px Georgia;
+	color: #666666;
+}
+.header2 a:hover{
+	color: gold;
+}
+.header2 p{
+	font: 11px Tahoma;
+	color: #B7B7B7 ;
+}
+/*banner的部分*/
+.banner2{
+	width: 940px;
+	height: 358px;
+	background: url(../img/banner-bg.png) no-repeat;
+	position: relative;
+}
+.pointer{
+	position: absolute;
+	left: 18px;
+	bottom: 20px;
+}
+.banner2 a{
+	width: 17px;
+	height: 17px;
+	background: url(../img/pointer.png) no-repeat;
+	float: left;
+}
+.banner2 .active{
+	background: url(../img/pointer.png) -17px 0 no-repeat ;
+}
+.banner2 a:hover{
+	background: url(../img/pointer.png) -17px 0 no-repeat ;
+}
+/*内容部分*/
+h2{
+	font: bold 24px Georgia;
+	color: #000000;
+	text-align: center;
+	background: url(../img/break.png) no-repeat bottom center;
+	padding-bottom: 24px;
+}
+/*第一部分的内容*/
+.content1{
+	width: 300px;
+	margin-left: 20px;
+	padding-top: 26px;
+	float: left;
+}
+.first{
+	margin: 0;
+}
+.content1 h3{
+	font: 21px Georgia;
+	color: #11719e;
+}
+.content1 .p1{
+	font: 12px "times new roman";
+	color: #8C8C8C;
+}
+.content1 .img-bg{
+	background: url(../img/content-bg.png) no-repeat;
+	width: 300px;
+	height: 198px;
+	margin-top: 14px;
+	padding-top: 10px;
+	text-align: center;
+}
+.content1 .p2{
+	font: 13px/18px Helvetica;
+	color: #3e3e3e;
+	word-spacing: 2px;
+	padding-top: 10px;
+}
+.content1 a{
+	display: block;
+	width: 163px;
+	height: 40px;
+	background: url(../img/lernmore.png) no-repeat;
+	padding-top: 12px;
+	margin-top: 12px;
+	text-indent: 12px;
+	text-decoration: none;
+	font: 12px  "times new roman";
+	color: #016999;
+}
+.content1 a:hover{
+	color: #0598dc;
+}
+/*第二部分的内容*/
+.contact{
+	background: url(../img/break.png) no-repeat;
+}
+.contact1{
+	
+	width: 300px;
+	height: 378px;
+	float: left;
+	margin-left: 20px;
+}
+.contact .first{
+	margin: 0;
+}
+.contact1 .title1{
+	height: 23px;
+	border-bottom: 1px #D6D6D6 dotted;
+	font: 18px Georgia;
+	color: #444444;
+	padding-top: 40px;
+}
+.contact1 .second{
+	height: 83px;
+	margin-top: 13px;
+}
+.contact1 .p1{
+	
+	font: 12px Helvetica;
+	color: #444;
+}
+.contact1 .a1{
+	width: 57px;
+	height: 57px;
+	background: url(../img/rss.png) no-repeat;
+	float: left;
+}
+.contact1 .a2{
+	width: 57px;
+	height: 57px;
+	background: url(../img/fb.png) no-repeat;
+	float: left;
+}
+.contact1 .a3{
+	width: 57px;
+	height: 57px;
+	background: url(../img/in.png) no-repeat;
+	float: left;
+}
+.contact1 .a4{
+	width: 57px;
+	height: 57px;
+	background: url(../img/yt.png) no-repeat;
+	float: left;
+}
+.contact1 .a5{
+	width: 57px;
+	height: 57px;
+	background: url(../img/tw.png) no-repeat;
+	float: left;
+}
+/*n内容第二标题*/
+/*第一个盒子*/
+.contact1 .title2{
+	font: bold 18px Gill Sans MT;
+	color: #444444;
+	height: 24px;
+	border-bottom: 1px #D6D6D6 dotted;
+	padding-top: 40px;
+}
+.contact1 .p2{
+	height: 38px;
+	font: 12px Helvetica;
+	color: #444444;
+	padding-top: 13px;
+}
+.contact1 .form1{
+	height: 76px;
+}
+.text1{
+	width: 286px;
+	height: 33px;
+	background: url(../img/text.gif) no-repeat;
+	border: none;
+	padding: 0 0 0 10px;
+	line-height: 33px;
+}
+.submit{
+	width: 163px;
+	height: 32px;
+	background: url(../img/submit.gif) no-repeat;
+	border: none;
+	margin-top: 11px;
+	font: 13px Georgia;
+	color: #fff;
+	text-align: left;
+	padding-left: 13px;
+}
+.submit:hover{
+	cursor: pointer;
+	color: blueviolet;
+}
+/*第二个盒子*/
+.text2{
+	width: 286px;
+	height: 33px;
+	background: url(../img/text.gif) no-repeat;
+	border: none;
+	padding: 0 0 0 10px;
+	margin-top: 16px;
+	line-height: 33px;
+}
+.textarea{
+	width: 300px;
+	height: 134px;
+	background: url(../img/textarea.gif) no-repeat;
+	border: none;
+	resize: none;
+	margin: 15px 0 0 0;
+	padding-left: 10px;
+}
+/*第三个盒子*/
+.p3{
+	margin-top: 15px;
+	height: 66px;
+	background: url(../img/1.png) no-repeat;
+	border-bottom: 1px #D6D6D6 dotted;
+	font: 12px helvetica;
+	color: #444444;
+	padding-left: 67px;
+}
+.p4{
+	margin-top: 15px;
+	height: 66px;
+	background: url(../img/2.png) no-repeat;
+	border-bottom: 1px #D6D6D6 dotted;
+	font: 12px helvetica;
+	color: #444444;
+	padding-left: 67px;
+}
+.p5{
+	margin-top: 15px;
+	height: 66px;
+	background: url(../img/3.png) no-repeat;
+	border-bottom: 1px #D6D6D6 dotted;
+	font: 12px helvetica;
+	color: #444444;
+	padding-left: 67px;
+}
+/*网页最底部*/
+.foot{
+	height: 173px;
+	background-color: #333333;
+	border-top: 10px #4c4c4c solid;
+	font: 11px helvetica;
+	color: #999999;
+	padding: 16px 22px 0 8px;
+}
+.foot1 a{
+	font: 11px helvetica;
+	color: #999999;
+}
+.foot1 a:hover{
+	color: yellow;
+}
+.foot2{
+	float: right;
+}
+/**/
+/**/
+/**/
+/**/

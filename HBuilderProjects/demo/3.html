@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+		/*兄弟选择器*/
+			a + p{
+				color: orange;
+			}
+			a ~ p{
+				background-color: greenyellow;
+			}
+			p:not(.p1){
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>烟台苹果</p>
+		<p>莱阳梨</p>
+		<a href="#">链接</a>
+		<p>北京烤鸭</p>
+		<p class="p1">驴打滚</p>	
+		<p>豌豆黄</p>
+		<p>胶圈</p>
+	</body>
+</html>

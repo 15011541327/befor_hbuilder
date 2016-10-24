@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				document.onclick=function(ev){
+					ev=ev||event;
+					//创建a
+					var btn=document.getElementsByTagName("button")[0];
+					btn.onclick=function(){
+						var a=document.createElement("a");
+						var li=document.createElement("li");
+						var ul=document.getElementsByTagName("ul")[0];
+						a.innerHTML="我是一个a标签";
+						a.href="#"
+						ul.appendChild(li);
+						li.appendChild(a);
+						
+					}
+					if(ev.target.nodeName.toLowerCase()=="a"){
+						alert("我是新标签")
+					}
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">我是一个a标签</a></li>
+		</ul>
+		<button>添加一个a标签</button>
+		
+		
+		
+	</body>
+</html>

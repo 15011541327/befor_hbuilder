@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>调整坦克的方向</title>
+		<script type="text/javascript">
+		function MyTank(x,y,direct){
+			this.x=x;
+			this.y=y;
+			this.direct=direct;
+			this.speed=5;
+			//初始化
+			mytank.style.left=this.x+"px";
+			mytank.style.top=this.y+"px";
+			mytank.style.backgroundPositionY="0px";
+			//event表示按键事件
+			this.move=function move(event){
+				//a表示左 3
+				//b表示下 2
+				//d标示右 1
+				//w表示上 0
+				switch (even.keyCode){
+					case 65:
+					this.x=this.speed;
+					this.direct=3;
+					mytank.style.backgroundPositionY="40px";
+					case 83:
+					this.x=this.speed;
+					this.direct=2;
+					mytank.style.backgroundPositionY="40px";
+					case 68:
+					this.x=this.speed;
+					this.direct=1;
+					mytank.style.backgroundPositionY="40px";
+					case 87:
+					this.x=this.speed;
+					this.direct=0;
+					mytank.style.backgroundPositionY="40px";
+				}
+				//统一改变位置
+				mytank.style.left=this.x+"px";
+				mytank.style.top=this.y+"px";
+			}
+		}
+			window.onload=function(){
+				//创建坦克
+				var hero=new MyTank(200,360,0)
+			}
+		</script>
+	</head>
+	<body>
+		<img id="mytank" src=""/>
+	</body>
+</html>

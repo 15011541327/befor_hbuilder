@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function My(){
+				
+			};
+			var a = new My();
+			//通过对象.constructor来获取创建对象时使用的构造函数
+			console.log(a.constructor);/*function My(){   }"*/
+				
+			//instanceof检查一个对象是否属于一个类型							
+			console.log(a instanceof My);//true
+			
+			
+			
+			
+			function Person(name,age,address){
+				this.name = name;
+				this.age = age;
+			}
+			
+			Person.prototype.sayName = function(){
+				alert(this.name);
+			}
+			var per1 = new Person();
+			var per2 = new Person();
+			console.log(per1.sayName==per2.sayName);//true
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,264 @@
+body{
+	background: url(../img/1.png) repeat-x ;
+	font: 12px Georgia;
+}
+
+.w{
+	width: 940px;
+	margin: 0 auto;
+}
+
+.clear:after{
+	content:"" ;
+	display: table;
+	clear: both;
+}
+.logo{
+	padding: 37px 0 0 15px;
+}
+.nav{
+	float: right;
+	margin: 59px 0 0 0;
+}
+
+.nav li{
+	float: left;
+	padding: 0 8px 8px 0;
+	border-left: 1px #d6d6d6 dotted;
+	padding-left: 10px;
+}
+
+.banner{
+	background: url(../img/背景1.png) no-repeat;
+	height: 355px;
+	margin-top: 46px;
+	position: relative;
+	
+}
+.navPointer{
+	position: absolute;
+	left: 19px;
+	bottom: 21px;
+}
+.navPointer a{
+	float: left;
+	width: 17px;
+	height: 17px;
+	background:url(../img/icon/pointer.png) no-repeat ;
+	margin-left: 4px;
+}
+
+.navPointer .active{
+	background: url(../img/icon/pointer.png) -17px 0 no-repeat;
+	
+}
+.navPointer a:hover{
+	background: url(../img/icon/pointer.png) -17px 0 no-repeat;
+}
+
+.conter{
+	border: 1px red solid;
+}
+.conter .h22{
+	text-align: center;
+	font: 24px Georgia;
+	color: #000000;
+	background: url(../img/break.png) bottom center no-repeat;
+	padding-bottom: 21px ;
+	
+}
+.h2{
+	font: 21px Georgia;
+	color:#11719e ;
+}
+
+/* conent 的第一个 div*/
+.conterfi{
+	width: 300px;
+	float: left;
+	padding-top: 26px;
+	margin-left:20px ;
+}
+.conterfi h3{
+	font: 21px Georgia ;
+	color:#11719e ;
+}
+
+.conterfi .p1{
+	font: 12px Helvetica;
+	color: #c7c7c7;
+}
+.conterfi .p2{
+	font: 13px Helvetica;
+	color: #3e3e3e;
+}
+.conterfii{
+	background: url(../img/img-bg.png) no-repeat;
+	width: 300px;
+	height: 191px;
+	margin-top: 14px;
+	padding-top:14PX ;
+	text-align: center;
+	
+}
+
+.firDiv{
+	margin-left: 0;
+}
+
+.learnmore{
+	display: block;
+	background: url(../img/btn/btn01.png) no-repeat;
+	font:12px Helvetica ;
+	width: 163px;
+	height: 20px;
+	padding-top:11px ;
+	text-indent:10px ;
+	margin-top: 20px;
+}
+
+.p2{
+	word-spacing: 2px;
+}
+
+
+.contect{
+	height: 381px;
+	
+	float: left;
+	background: url(../img/break.png) no-repeat;
+	
+	margin-top: 20px;
+	
+	
+}
+.leftdiv{
+	width: 300px;
+	height: 381px;
+	position: relative;
+	float: left;
+}
+
+.conterdiv{
+	width: 300px;
+	height: 381px;
+	position: relative;
+	float: left;
+	padding: 0 20px 0 20px;
+	
+}
+
+.footdiv{
+	width: 300px;
+	height: 381px;
+	position: relative;
+	
+	float: left;
+}
+
+.h3{
+	height:25px ;
+	font:  18px Georgia ;
+	border-bottom: 1px  #d3d3d3 dashed ;
+	padding-top:41px ;
+	
+}
+.leftp1{
+	
+	width: 300px;
+	height: 37px;
+	font: 12px [Helvetica] ;
+	
+	padding-top: 11px;
+}
+
+.leftp2{
+	width: 300px;
+	height: 25px;
+	
+	padding-top: 13px;
+}
+.leftdiv a{
+	text-decoration: none;
+
+}
+.h4{
+	font: bold 18px Gill Sans MT;
+	color: #444444;
+	border-bottom: 1px #d3d3d3 dashed;
+	padding:27px 0 8px 0;
+}
+.text{
+	width: 300px;
+	height: 32px ;
+	background: url(../img/input-bg.png) no-repeat;
+	border: none;
+
+
+	margin-top:16px ;
+}
+#id{
+	padding-left: 10px;
+}
+.textarer{
+	width: 300px;
+	height: 134px;
+	background: url(../img/textarea-bg.png) no-repeat;
+	border: none;
+	margin-top: 16px;
+	resize: none;
+	
+}
+.button{
+	width: 163px;
+	height: 32px;
+	background:url(../img/btn/btn02.png) no-repeat ;
+	border: none;
+	margin-top: 10px;
+	padding: 0;
+	text-align: left;
+	text-indent: 10px ;
+	
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	
+	
+}
+
+
+.footdiv p{
+		height: 38px;
+	padding: 15px 0 29px 60px ;
+}
+.footp1{
+	border-bottom: 1px #d3d3d3 dashed;
+	background: url(../img/1.gif) no-repeat left center;
+	
+}
+
+
+.footp2{
+	border-bottom: 1px #d3d3d3 dashed;
+	background: url(../img/2.gif) no-repeat left center;
+}
+
+
+.footp3{
+	background: url(../img/3.gif) no-repeat left center;
+	border-bottom: 1px #d3d3d3 dashed;
+}
+.footerl{
+	height: 300px;
+	background: black;
+}
+
+
+
+
+
+
+
+
+
+

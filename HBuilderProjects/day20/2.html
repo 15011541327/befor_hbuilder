@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box");
+				box.onmousedown=function(ev){
+					try{
+						box.setCapture();
+					}catch(e){
+						
+					}
+					ev=ev||event;
+					var disleft=ev.clientX-box.offsetLeft;
+					var distop=ev.clientY-box.offsetTop;
+					//鼠标移动
+					document.onmousemove=function(ev){
+						
+						ev=ev||event;
+						var left=ev.clientX-disleft;
+						var top=ev.clientY-distop;
+						//box设置边界
+						var maxleft=document.documentElement.clientWidth-box.offsetLeft;
+						var maxtop=document.documentElement.clientHeight-box.offsetHeight;
+						
+						if (left<10) {
+							left=0;
+						} else if(left>maxleft-10){
+							left=maxleft;
+						}else if (top<10) {
+							top=0;
+						} else if(top>maxtop-10){
+							top=maxtop;
+						}
+						
+						box.style.left=left+"px";
+						box.style.top=top+"px";
+						
+					}
+					//鼠标松开
+					document.onmouseup=function(){
+						document.onmouseup=document.onmousemove=null;
+						try{
+							box.releaseCapture();
+						}catch(e){
+							
+						}
+						
+					}
+					return false;
+				}
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		aaa
+		<div id="box"></div>
+		
+		<div style="width: 100px; height: 100px; background: yellow; position: absolute;  top:200px; left: 500px;"></div>
+		
+	</body>
+</html>

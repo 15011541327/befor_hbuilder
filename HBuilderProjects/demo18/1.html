@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			var box=document.getElementById("box");
+			var color=getComputedStyle(box).backgroundColor;
+			alert(color)
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				box.style.backgroundColor="red";
+				alert(box.style.backgroundColor);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<input type="checkbox" />我已阅读，并同意<br />
+		<button id="btn">注册成功</button>
+	</body>
+</html>

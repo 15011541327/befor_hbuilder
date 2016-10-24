@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function s1(){
+				
+				function s2(){
+					console.log("hello");
+				}
+				return s2;
+			}
+			
+			var result=s1();
+			console.log(result);
+			//把函数当做对象的一个属性赋值给对象时，那么这种函数我们称为对象
+			var obj=new Object;
+			obj.hello=s1;
+			console.log(obj.hello());
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

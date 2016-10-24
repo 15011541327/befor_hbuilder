@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#menu{
+				height: 400px;
+				width: 200px;
+				background: #bfa;
+				position: absolute;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var menu=document.getElementById("menu");
+				document.oncontextmenu=function(ev){
+					ev=ev||event;
+					menu.style.display="block";
+					
+					menu.style.left=ev.clientX+"px";
+					menu.style.top=ev.clientY+"px";
+					return　false;
+				}
+				document.onclick=function(){
+					menu.style.display="none";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="menu"></div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//求10的阶乘
+			/*
+			var result=1;
+			for (var i=1;i<=10;i++) {
+				result*=i;
+			}
+			console.log(result);
+			*/
+			
+			
+			function sum(i){
+				if(i==1){
+					return 1;
+				}
+				return i*arguments.callee(i-1);
+				
+			}
+			var result=sum(10);
+			console.log(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

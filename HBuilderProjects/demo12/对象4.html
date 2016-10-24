@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//创建对象的第二种方式
+			//{}和new Object()一样
+			var obj={
+				name:"sunwukong",
+				age:899,
+				gender:"male"
+			}
+			console.log(obj.name);
+			
+			//使用对象来为变量定义命名空间
+			//A组
+			var a={};//命名空间；
+			 a.name="xiaofei"
+			 a.age=22;
+			//B组
+			var b={};
+			a.name="xiaofei"
+			 a.age=22;
+			//C组
+			var c={};
+			a.name="xiaofei"
+			 a.age=22;
+			 
+			 //对象的方法
+			 var obj1={};
+			 var obj2={};
+			 
+			 function fun(){
+			 	alert("我是fun函数")
+			 }
+			
+			obj1.ok=fun;
+		    obj1.ok();
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

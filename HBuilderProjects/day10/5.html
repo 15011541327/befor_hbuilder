@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			/*三元运算符*/
+			var a = 2;
+			var b = 3;
+			var max = a > b ? a : b;
+			//console.log(max)
+			/*相等运算符==*/
+			a = 1==1;
+			//console.log(a);//true
+			a = 10==1
+			//console.log(a);//false
+			a = "OK" == "OK";
+			//console.log(a);//true
+			a = true == false;
+			//console.log(a);//false
+			
+			a = 1==true;
+			//console.log(a);//true
+			a = 1 == "1";
+			//console.log(a);//true
+			a = "OK" == true;
+			//console.log(a);//false
+			a = NaN == NaN;
+			//console.log(a);//false
+			//用一个函数isNaN()检查一个值是否是NaN
+			a = isNaN(NaN);
+			//console.log(a);//true
+			a = isNaN(Infinity);
+			//console.log(a);//false
+			a = undefined == null;
+			//console.log(a);//true
+			
+			
+			/*全等运算符===*/
+			a = undefined === null;
+			console.log(a);//false
+			a = 1 === "1";
+			console.log(a);//false
+			
+			
+			//全不等
+			flag = 123 !== "123";
+			console.log(flag);//true
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		function getEleByClass(cn){
+				//顶一个数组，用来保存结果
+				var arr = [];
+				
+				//定义一个正则表达式检查是否包含指定的class
+				// \b单词\b
+				var reg = new RegExp("\\b"+cn+"\\b");
+
+				//查询所有的元素
+				var all = document.all;
+				//遍历所有的元素
+				for(var i=0 ; i<all.length ; i++){
+					//判断当前的元素的className属性是否和cn匹配
+					var namearr = all[i].className;
+					
+					//判断className和cn是否相等
+					if(reg.test(namearr)){
+						//将元素添加到结果中
+						arr.push(all[i]);
+					}
+				}
+
+				
+				return arr;
+			}
+		function getclassname(cn){
+			var arr = [];
+			var reg = new RegExp("\\b"+cn+"\\b");
+			var all = document.all;
+			for(var i=0 ; i<all.length ; i++){
+				var namearr = all[i].className;
+				if(reg.test(namearr)){
+					arr.push(all[i]);
+				}
+			}
+			return arr;
+		}
+		
+		
+		
+		window.onload=function(){
+			var ok=getclassname("hello");
+			alert(ok[0].innerHTML);
+		}
+		</script>
+	</head>
+	<body>
+		<div class="ahello abc">erg</div>
+		<div class="hello bcd">fff</div>
+		<div class="hello efg">gfjd</div>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+			#img{
+			position: absolute;	
+			}
+		</style>
+		<script type="text/javascript">
+		
+			function bind(obj){
+				obj.onmousedown=function(ev){
+				try{
+					obj.setCapture();
+				}catch(e){
+					
+				}
+				ev=ev||event;
+				var disleft=ev.clientX-obj.offsetLeft;
+				var distop=ev.clientY-obj.offsetTop;
+				
+				
+				document.onmousemove=function(ev){
+					ev=ev||event;
+					//获取位置
+					var left=ev.clientX-disleft;
+					var top=ev.clientY-distop;
+					//盒子可移动的最大距离
+					var maxleft=document.documentElement.clientX-obj.offsetWidth;
+					var maxtop=document.documentElement.clientY-obj.offsetHeight;
+					if (left<10) {
+						left=0;
+					} else if(left>maxleft-10){
+						left=maxleft;
+					}else if (top<10) {
+						top=0;
+					} if (top>maxtop-10){
+						top=maxtop;
+					}
+					
+					obj.style.left=left+"px";
+					obj.style.top=top+"px";
+				}
+				document.onmouseup=function(){
+					document.onmouseup =document.onmousemove=null;
+					try{
+							obj.releaseCapture();
+						}catch(e){
+							
+						}
+				}
+				return false;
+				}
+			}
+			window.onload=function(){
+			var box = document.getElementById("box");
+			bind(box);
+			var img=document.getElementById("img");
+			bind(img);
+		}
+			
+		</script>
+	</head>
+	<body>
+		aaaaa
+		<div id="box"></div>
+		
+		<img id="img" src="img/2.png" />
+	</body>
+</html>

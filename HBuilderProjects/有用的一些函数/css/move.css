@@ -1,0 +1,19 @@
+.wrapper{
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+ul{
+	background: url(../img/bg.jpg) no-repeat;
+	display: table;
+	width: 100%;
+}
+li{
+	display: table-cell;
+	vertical-align: middle;
+}
+img{
+	display: block;
+	width: 100%;
+	
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		function bind(obj,evenstr,callback){
+			//判断obj中是否包含addEventListener
+			if (obj.addEventListener) {
+				obj.addEventListener(evenstr,callback,false);
+			} else{
+				//attachEvent绑定的响应函数中，this永远是window
+				obj.attachEvent("on"+evenstr,function(){
+					callback.call(obj);
+				});
+			}
+		}
+		
+			window.onload=function(){
+				var box=document.getElementById("box");
+				//ie
+				var fun= box.onmousewheel;
+				bind(box,"DOMMousescroll",fun)
+				function fun(ev){
+					ev=ev||event;
+					
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body style="height: 1000px;">
+		<div id="box" style="width: 100px; height: 100px; background: red;"></div>
+	</body>
+</html>

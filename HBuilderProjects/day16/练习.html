@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img=document.getElementsByTagName("img")[0];
+				var p=document.getElementsByTagName("p")[0];
+				var imgarr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"]
+				var index=0;
+				p.innerHTML= "这是第"+(index+1)+"张,一共"+imgarr.length+"张";
+				var btn1=document.getElementById("pre");
+				btn1.onclick=function(){
+					//alert("ik")
+					if(index<=0){
+						index=imgarr.length;
+					}
+					index--;
+					img.src=imgarr[index];
+					
+					p.innerHTML= "这是第"+(index+1)+"张,一共"+imgarr.length+"张";
+				}
+				var btn2=document.getElementById("next");
+				btn2.onclick=function(){
+					if(index>=imgarr.length-1){
+						index=-1;
+					}
+					index++;
+					img.src=imgarr[index];
+					p.innerHTML= "这是第"+(index+1)+"张,一共"+imgarr.length+"张";
+				}
+			}
+		</script>
+		<style type="text/css">
+			.ok{
+				width: 500px;
+				height: 450px;
+				padding: 10px;
+				background-color: greenyellow;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="ok">
+			<p></p>
+			<img src="img/1.jpg"/><br />
+			<button id="pre"> < </button>
+			<button id="next"> > </button>
+		</div>
+	</body>
+</html>

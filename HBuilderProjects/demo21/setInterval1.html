@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var h = document.getElementById("in");
+				var num=0;
+				var timer= setInterval(function(){
+					
+					h.innerHTML=++num;
+					if(num==10){
+						clearInterval(timer);
+					}
+					
+				},200)
+			}
+		</script>
+	</head>
+	<body>
+	<h1 id="in"></h1>
+	</body>
+</html>

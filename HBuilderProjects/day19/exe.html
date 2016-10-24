@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+			margin: 0;
+				padding: 0;
+		}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: relative;
+				
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				document.onmousemove=function(ev){
+					 ev=ev||event;
+					var x=ev.clientX;
+					var y=ev.clientY;
+					
+					var x1=document.body.scrollLeft||document.documentElement.scrollLeft;
+					var y1=document.body.scrollTop||document.documentElement.scrollTop;
+					box.style.top =y+y1+"px";
+					box.style.left=x+x1+"px";
+					
+					
+				}
+			}
+			
+		</script>
+	</head>
+	<body style="height: 1500px;">
+		<div id="box"></div>
+	</body>
+	</body>
+</html>

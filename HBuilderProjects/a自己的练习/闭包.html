@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		window.onload=function(){
+			function ret(i){
+				return function(){
+					a.innerHTML=i+1;
+				}
+			}
+			
+			var a=document.getElementsByTagName("a");
+			for (var i=0;i<5;i++) {
+				a[i].onclick=ret(i);
+			}
+		}
+			
+		</script>
+	</head>
+	<body>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+	</body>
+</html>

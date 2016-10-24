@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		function bind(obj , eventStr , callBack){
+				//判断obj中是否包含addEventListener
+				if(obj.addEventListener){
+					//如果addEventListener存在，则调用它来绑定事件
+					obj.addEventListener(eventStr , callBack , false);
+				}else{
+					//如果addEventListener不存在，则调用attachEvent
+					//attachEvent绑定的事件响应函数中this永远是window
+					obj.attachEvent("on"+eventStr,function(){
+						callBack.call(obj);
+					});
+				}
+				
+			}
+
+		window.onload = function(){
+			var box =document.getElementById("box");
+			//火狐支持DOMMousescroll
+			//DOMMousescroll只能通过addEventListener来绑定
+			//使用object.事件=function(){},可以使用return false
+			//通过addEventListener绑定的函数不能使用return false
+			//可以通过event.preventDefault
+			  box.onmousewheel = fun;
+			bind(box,"DOMMouseScroll",fun);
+			function fun(ev){
+				ev=ev||event;
+				var length=0;
+				//wheelDelta
+				//detail火狐支持
+				if(ev.wheelDelta){
+					length=ev.wheelDelta>0?-10:10;
+				}else{
+					length=ev.detail>0?10:-10;
+				}
+				box.style.height = box.clientHeight + length + "px";
+				if(ev.preventDefault){
+						//取消火狐默认行为
+						ev.preventDefault();
+					}
+				return false;
+			}
+			
+		}
+		
+		</script>
+	</head>
+	<body style="height: 1000px;">
+		<div id="box" style="width: 100px; height: 100px; background: red;"></div>
+	</body>
+</html>

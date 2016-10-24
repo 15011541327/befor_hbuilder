@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		window.onload=function(){
+			var back1=document.getElementById("back");
+			//第一个按钮
+			back1.onclick=function(){
+				//回退
+				//window.history.back();
+				//向前跳转到一个页面
+				window.history.forward();
+				//向前或者向后跳转几个页面
+				window.history.go(-2);
+			}
+			//第二个按钮
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				//window.location="http://www.baidu.com";
+				window.location.reload();
+				//window.location.reload(true);忽略缓存，强制刷新
+				//window.location.assign("1.html");跳转页面，也会生产历史记录
+				window.location.replace("1.html");跳转页面,不会生产历史记录,也不能使用回退
+			}
+		}
+			
+		</script>
+	</head>
+	<body>
+		<button id="back">回退</button>
+		<button id="btn">跳转到百度</button>
+	</body>
+</html>

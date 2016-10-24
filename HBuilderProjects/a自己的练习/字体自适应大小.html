@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+		.box{
+				max-width: 640px;
+				min-width: 320px;
+				margin: 0 auto;
+			}
+			p{
+				font-size:1.5rem;
+				white-space: nowrap;
+			}
+			
+			@media screen and (max-width:540px){
+				html{
+					font-size:14px;
+				}
+				@media screen and (max-width:440px){
+					
+				html{
+					font-size:12px;
+				}
+				@media screen and (max-width:400px){
+					
+				html{
+					font-size:10px;
+				}
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+	<div class="box">
+		
+	
+		<p>1.首先，在网页代码的头部，加入一行viewport元标签。</p>
+<p>viewport是网页默认的宽度和高度，上面这行代码的意思是，网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，即网页初始大小占屏幕面积的100%。
+所有主流浏览器都支持这个设置，包括IE9，对于那些老式浏览器（主要是IE6、7、8），需要使用css3-mediaqueries.js。
+2、不使用绝对宽度由于网页会根据屏幕宽度调整布局，所以不能使用绝对宽度的布局，也不能使用具有绝对宽度的元素。这一条非常重要。具体说，CSS代码不能指定像素宽度：width:xxx px;
+只能指定百分比宽度：width: xx%;或者width:auto;
+3、相对大小的字体
+字体也不能使用绝对大小（px），而只能使用相对大小（em）。
+body {
+font: normal 100% Helvetica, Arial, sans-serif;
+}
+上面的代码指定，字体大小是页面默认大小的100%，即16像素。
+h1 {
+font-size: 1.5em;
+}
+然后，h1的大小是默认大小的1.5倍，即24像素（24/16=1.5）。
+small {
+font-size: 0.875em;
+}
+small元素的大小是默认大小的0.875倍，即14像素（14/16=0.875）。
+</p>
+</div>
+	</body>
+</html>

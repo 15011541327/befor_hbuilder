@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 200px;
+				height: 100px;
+				background-color: red;
+				margin-bottom: 20px;
+				border: 1px black solid;
+			}
+			.box2{
+				width: 200px;
+				height: 100px;
+				background-color: blue;
+				margin-top: 20px;
+				border: 1px black solid;
+			}
+			.box1:before{
+				/*content: "3";
+				display: table;
+				clear: both;*/
+				/*向父元素后部添加一个内容*/
+				content: "";
+				/*修改它显示样式为块元素*/
+				display: block;
+				/*清除块元素左右的浮动*/
+				clear: both;
+			}	
+			.box1{
+				zoom: 1;
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+		
+		</div>
+		<div class="box2">
+			
+		</div>
+	</body>
+</html>

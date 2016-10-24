@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>运算符</title>
+		<script type="text/javascript">
+			/*"+"运算符
+			 * 对于Number类型，正常运算
+			 * 对于String类型，会将其它类型转换成字符串类型；
+			 * 对于Boolean null undefined 会转换成Number类型计算；
+			 */
+			
+			//一、Number和String的"+"运算
+			var a = "spring"+1+2;
+			//console.log(typeof a);输出:string
+			//console.log(a);输出:spring12
+			 a = 1+2+"spring";
+			//console.log(typeof a);输出:string
+			//console.log(a);输出:3spring
+			
+			//二、String的"+"运算
+			 a = "Today "+"is "+"Tuesday"
+			//console.log(typeof a);输出:string
+			//console.log(a);输出:Today is Tuesday
+			a = ""+null;
+			//console.log(typeof a);输出:string
+			//console.log(a);输出:null
+			
+			//三、Boolean null undefined的"+"运算
+			a = 1 + true;
+			//console.log(typeof a);输出:number
+			//console.log(a);输出:2
+			a = 1 + null;
+			//console.log(typeof a);输出:number
+		    //console.log(a);输出:1
+		    a = undefined + 1;
+		    //console.log(typeof a);输出:number
+		    //console.log(a);输出:NaN
+		    
+		    
+		    
+		    //"-"、"*"、"/"
+		    a = "100" - "50"; // 50
+			a = false - true; // -1
+			a = "20" - true; // 19
+			a = false * 50; //0
+			a = 8 / 2 ; //4
+			a = 8 % 7; //1
+		    // console.log(a);
+		   
+		   
+		    //"++"、"--"
+		    a = 10;
+		    var b = a++;
+		    //console.log(b);输出：10
+		    //console.log(a);输出：11
+		    var c = ++a;
+		    console.log(c);//输出：12
+		    console.log(a);//输出：12
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

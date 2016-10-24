@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		
+		/*执行函数时，使用一个变量，会从最近的执行环境找起，如果函数本身执行环境没有这个变量，会向上一级执行环境查找
+		如果找到正常使用这个变量。如果没有找到，会向上一级的上一级去找，之道找到全局执行环境位置。如果都没有，则抛出异常。
+		
+		这个东西称为作用域链
+		*/
+			var a=20;
+			if(a>10){
+				var b=5;
+			}
+			function fun(){
+				a=8;
+				function test(){
+					alert(a);	
+					alert(b);
+				}
+				return test();
+			}
+			
+			fun();
+			
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

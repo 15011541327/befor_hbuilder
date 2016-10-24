@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<script type="text/javascript">
+	
+	/*
+	 * 提出删除tr的单击响应函数
+	 */
+	
+		function delA(j){
+				
+		//在这个响应函数里，用户点击哪个超链接this就是哪个a元素
+		//点击超链接以后删除当前超链接所在的一行数据
+		//获取当元素的所在tr
+		return function(){
+		var tr = this.parentNode.parentNode;
+		
+		//获取要删除的员工的姓名
+		var name = tr.getElementsByTagName("td")[0].innerHTML;
+		
+		/*
+		 * 浏览器在渲染表格时，会自动在table中添加一个tbody，然后所有的tr都会放到tbody
+		 * 所以tr的实际的父元素是tbody，而不是table
+		 */
+		//alert(tr.parentNode);
+		
+		//弹出一个确认框
+		var flag = confirm("确认删除"+name+"的信息吗?");
+		
+		//判断flag的值是否为true
+		if(flag){
+			//删除tr
+			tr.parentNode.removeChild(tr);
+		}
+		
+		//取消a的默认行为
+		//当我们在响应函数中返回一个false时可以取消指定元素的默认的行为
+		return false;
+		}
+	};
+
+
+	window.onload = function(){
+		
+		//删除员工信息，点击超链接以后，删除指定的员工信息
+		//获取所有的超链接
+		var aArrs = document.getElementsByTagName("a");
+		//遍历aArrs
+		for(var i=0 ; i<aArrs.length ; i++){
+			
+			//为每一个a绑定一个单击响应函数
+			aArrs[i].onclick = delA(i);
+			
+		}
+		
+		
+		/*
+		 * 添加新员工
+		 */
+		//为addEmpButton绑定一个单击响应函数
+		var addEmpButton = document.getElementById("addEmpButton");
+		addEmpButton.onclick = function(){
+			
+			//获取用户填写的内容
+			var name = document.getElementById("empName").value;
+			var email = document.getElementById("email").value;
+			var salary = document.getElementById("salary").value;
+			
+			/*
+			 * <tr>
+					<td>Tom</td>
+					<td>tom@tom.com</td>
+					<td>5000</td>
+					<td><a href="deleteEmp?id=001">Delete</a></td>
+				</tr>
+			 */
+			
+			//创建整体结构
+			
+			//创建一个tr元素节点对象
+			var tr = document.createElement("tr");
+			
+			//向tr中添加td等
+			tr.innerHTML = "<td>"+name+"</td>"+
+							"<td>"+email+"</td>"+
+							"<td>"+salary+"</td>"+
+							"<td><a href='#'>Delete</a></td>";
+						   	
+			
+			//找到新添加的a元素
+			var a = tr.getElementsByTagName("a")[0];
+			a.onclick = delA(i);
+			
+			
+			//将tr添加到table当中
+			var employeeTable = document.getElementById("employeeTable");
+			var empTbody = employeeTable.getElementsByTagName("tbody")[0];
+			empTbody.appendChild(tr);
+			
+		};
+		
+		
+		
+	};
+	
+</script>
+
+	</head>
+	<body>
+	<table id="employeeTable">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td>Tom</td>
+			<td>tom@tom.com</td>
+			<td>5000</td>
+			<td><a href="deleteEmp?id=001">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Jerry</td>
+			<td>jerry@sohu.com</td>
+			<td>8000</td>
+			<td><a href="deleteEmp?id=002">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Bob</td>
+			<td>bob@tom.com</td>
+			<td>10000</td>
+			<td><a href="deleteEmp?id=003">Delete</a></td>
+		</tr>
+	</table>
+
+	<div id="formDiv">
+	
+		<h4>添加新员工</h4>
+
+		<table>
+			<tr>
+				<td class="word">name: </td>
+				<td class="inp">
+					<input type="text" name="empName" id="empName" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">email: </td>
+				<td class="inp">
+					<input type="text" name="email" id="email" />
+				</td>
+			</tr>
+			<tr>
+				<td class="word">salary: </td>
+				<td class="inp">
+					<input type="text" name="salary" id="salary" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button id="addEmpButton" value="abc">
+						Submit
+					</button>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	</body>
+</html>

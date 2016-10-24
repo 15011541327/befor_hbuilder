@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+function show(n)
+{
+document.getElementById(n).style.display="block";
+}
+function hide(n)
+{
+document.getElementById(n).style.display="none";
+}
+
+
+			
+			
+		</script>
+		<style type="text/css">
+			#div1{
+				width: 500px;
+				height: 200px;
+				background-color: greenyellow;
+			}
+			#div2{
+				width: 500px;
+				height: 200px;
+				background-color: yellow;
+				display: none;
+			}
+			li{
+				list-style: none;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+	<ul>
+		<li><a onmouseover="show('div1')" onmouseout="hide('div1')">显示/隐藏</a><div id="div1">div1</div></li>
+		<li><a onmouseover="show('div2')" onmouseout="hide('div2')">显示/隐藏</a><div id="div2">div2</div></li>
+	</ul>	
+	</body>
+</html>

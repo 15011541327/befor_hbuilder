@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var btn = document.getElementById('btn');
+				btn.onclick = function (ev) {
+					ev = ev || event;
+					var a = document.createElement('a');
+					var li = document.createElement('li');
+					a.href = '###';
+					a.innerHTML = '我是一个a链接';
+					var ul = document.getElementsByTagName('ul')[0];
+					ul.appendChild(li);
+					li.appendChild(a);
+				}
+					
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">我是一个超链接</a></li>
+		</ul>
+		
+		<button id="btn">添加一个a元素</button>
+		<p>我是一个p标签</p>
+	</body>
+</html>

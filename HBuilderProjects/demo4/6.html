@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		/*内联元素支持水平方向的内边距和外边距*/
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			a{
+				border: 1px red solid;
+				padding-left: 20px;
+				padding-right: 20px;
+				/*垂直方向的内边距会在内联元素中起作用，但是不影响布局*/
+				padding-top: 20px;
+				padding-bottom: 20px;
+				
+				
+				margin-left: 20px;
+				margin-right: 20px;
+				/*垂直方向的外边距会在内联元素中起作用，但是不影布局*/
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px red dashed;
+				background-color: greenyellow;
+				/*overflow: hidden;
+				overflow: scroll;*/
+				overflow: auto;
+			}
+		</style>;
+	</head>
+	<body>
+		<span>hello</span><br />
+		<a href="#">超链接1</a>
+		<a href="#">超链接2</a>
+		<div class="">
+			<p>这上面的夜的天空，奇怪而高，我生平没有见过这样奇怪而高的天空。他仿佛要离开人间而去，使人们仰面不再看见。然而现在却非常之蓝，闪闪地䀹着几十个星星的眼，冷眼。他的口角上现出微笑，似乎自以为大有深意，而将繁霜洒在我的园里的野花草上。			
+				我不知道那些花草真叫什么名字，人们叫他们什么名字。</p>
+		</div>
+	</body>
+</html>

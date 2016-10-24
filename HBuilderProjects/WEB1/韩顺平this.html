@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*function person(name,age){
+				this.name=name;
+				this.age=age;
+				this.show=function(){
+					console.log("名字"+this.name);
+				}
+				//计算i从1加到n的值
+				this.jisuan = function(n){
+					var res=0;
+					for (var i=1;i<=n;i++) {
+						res += i;
+					}
+					return res;
+				}
+			}
+			
+			var obj=new person("甜甜",5);
+			obj.show();
+			var obj2=new person("tiantian",34);
+			obj2.show();
+			alert(obj.jisuan(4));
+			*/
+			
+			/*第二种方法:
+			function person(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			function show(){
+				alert(this.name);
+			}
+			var obj=new person("tiantian",7);
+			obj.abc=show;
+			obj.abc();
+			*/
+			第三种方法:
+			function person(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			var obj=new person("jiaren",6);
+			obj.abc=function show(){
+				alert(this.name);
+			}
+			
+			obj.abc();
+			show();
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

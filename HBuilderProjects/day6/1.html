@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>absolute</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+			}
+			.box1{
+				background-color: red;
+				
+			}
+			.box2{
+				background-color: blue;
+				position: absolute;
+				left: 0;
+				top: 0;
+				/*opacity用来设置元素的透明度，他需要一个0 - 1的值
+				 	0 是完全透明   1完全不透明*/
+				opacity: 0.5;
+				/*如果是IE8以下的浏览器，不支持上边的方式*/
+				/*ie需要使用filter来设置透明，它的参数是 0 - 100*/
+				filter: alpha(opacity=100);
+			}
+			.box3{
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 700px; height: 700px; border: 1px black solid;position: relative;">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			
+		</div>
+		
+		
+		<a href="#" style="width: 100px; height: 100px; background-color: red;position: absolute;">我是一个超链接</a>
+		
+	</body>
+</html>

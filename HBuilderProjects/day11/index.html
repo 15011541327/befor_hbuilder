@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			/*三个数排序*/
+			var a= +prompt("输入第一个数：");
+			var b= +prompt("输入第二个数：");
+			var c= +prompt("输入第三个数：");
+			//alert(a+"--"+b+"--"+c);
+			if(a>b){
+				if(a>c){
+					if(b>c){
+						alert(c+","+b+","+a);
+					}else{
+						alert(b+","+c+","+a);
+					}
+				}else{
+					alert(b+","+a+","+c);
+				}
+			}else{
+				if(a>c){
+					alert(c+","+a+","+b);
+				}else{
+					if(b>c){
+						alert(a+","+c+","+b);
+					}else{
+						alert(a+","+b+","+c);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

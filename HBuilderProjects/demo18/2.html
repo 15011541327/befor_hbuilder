@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 250px;
+				height: 400px;
+				overflow: auto;
+				background-color: plum;
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			var p=document.getElementById("box");
+			
+			
+			p.onscroll=function(){
+				
+				if(this.scrollHeight - this.scrollTop == this.clientHeight){
+					
+					var btn1=document.getElementById("btn1")
+					var btn2=document.getElementById("btn2");
+				
+					btn1.disabled = false;
+					btn2.disabled = false;
+				}
+			}
+				
+		}
+		</script>
+	</head>
+	<body>
+		<p id="box">
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+			jgoagrjoujfeljdfjdlgkjxifmlfdkjfcljx
+		</p>
+		<input type="checkbox" id="btn1" disabled="disabled" />我已阅读，并同意<br />
+		
+		<button id="btn2" disabled="disabled">注册</button>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function MyClass(name,age,adress){
+				this.name=name;
+				this.age=age;
+				this.adress=adress;
+			}
+			MyClass.prototype.a=function(){
+				alert(this.name);
+			}
+			var per1=new MyClass("tiantian",13,"beijing");
+			per1.a();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

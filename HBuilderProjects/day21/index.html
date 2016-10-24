@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.noie .box1{
+				
+				width: 100px;
+				height: 100px;
+				background: red;
+				
+			}
+			
+			.ie .box1{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box1");
+				if ("ActiveXObject" in window) {
+					document.body.className="ie";
+				} else{
+					document.body.className="noie";
+				}
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<a href="1.html">跳到1.html</a>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position:absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box");
+				
+				document.onmousemove=function(ev){
+					ev=ev||event;
+					
+					var x=ev.clientX;
+					var y=ev.clientY;
+					
+					var scrx=document.body.scrollLeft;
+					var scry=document.body.scrollTop;
+					
+					box.style.left=x+scrx+"px";
+					box.style.top=y+scry+"px";
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body style="width: 900px;height: 1700px;">
+		<div id="box">
+			
+		</div>
+	</body>
+</html>
